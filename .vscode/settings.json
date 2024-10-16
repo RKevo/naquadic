@@ -1,0 +1,4 @@
+{
+	"dotnet.defaultSolution": "Naquadic.sln",
+	"C_Cpp.errorSquiggles": "disabled"
+}

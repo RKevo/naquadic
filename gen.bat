@@ -1,0 +1,2 @@
+ClangSharpPInvokeGenerator @generate-win.rsp
+ClangSharpPInvokeGenerator @generate-linux.rsp
