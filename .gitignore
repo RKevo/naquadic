@@ -1,7 +1,5 @@
-Naquadic/bin
-Naquadic/obj
-Test/bin
-Test/obj
+*/bin
+*/obj
 Doxyfile
 latex
 html

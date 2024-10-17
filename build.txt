@@ -1,2 +1,6 @@
-gcc -msse2 -mavx2 -O3 -Os -ftree-vectorize -c miniaudio.c -shared -o Naquadic/miniaudio.dll -m64
-gcc -msse2 -mavx2 -O3 -Os -ftree-vectorize -c miniaudio.c -shared -o Naquadic/miniaudio.so -fPIC -ldl -lpthread -lm -m64
+@(Windows)
+gcc -msse2 -mavx2 -O3 -Os -ftree-vectorize -c miniaudio.c -o miniaudio.o -m64
+gcc -shared -o Naquadic/miniaudio.dll miniaudio.o -W
+@(Linux)
+gcc -msse2 -mavx2 -O3 -Os -ftree-vectorize -c miniaudio.c -o miniaudio.o -fPIC -ldl -lpthread -lm -m64
+gcc -shared -o Naquadic/miniaudio.so miniaudio.o
