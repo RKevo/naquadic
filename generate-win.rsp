@@ -1,3 +1,4 @@
+--with-access-specifier *=Internal
 -f
 ./miniaudio.h
 -o
