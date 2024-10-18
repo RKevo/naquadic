@@ -9,3 +9,8 @@ using MA = Naquadic.Miniaudio.Linux.avx2;
 #endif
 
 global using Naquadic.Common;
+
+using System.Runtime.CompilerServices;
+[assembly: DisableRuntimeMarshalling]
+
+

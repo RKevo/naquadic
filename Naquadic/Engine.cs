@@ -1,3 +1,5 @@
+using Naquadic.Common.Spatial;
+
 namespace Naquadic.Thin;
 
 public class Engine : IDisposable
@@ -155,6 +157,93 @@ public class Engine : IDisposable
     public record Listener(uint Index)
     {
         public required Engine parent;
+        public unsafe Vec3f Position
+        {
+            get => funcs.ma_engine_listener_get_position(parent.__unsafeRef(), Index);
+            set
+            {
+                funcs.ma_engine_listener_set_position(
+                    parent.__unsafeRef(),
+                    Index,
+                    value.X,
+                    value.Y,
+                    value.Z
+                );
+            }
+        }
+        public unsafe Vec3f Direction
+        {
+            get => funcs.ma_engine_listener_get_direction(parent.__unsafeRef(), Index);
+            set
+            {
+                funcs.ma_engine_listener_set_direction(
+                    parent.__unsafeRef(),
+                    Index,
+                    value.X,
+                    value.Y,
+                    value.Z
+                );
+            }
+        }
+        public unsafe Vec3f Velocity
+        {
+            get => funcs.ma_engine_listener_get_velocity(parent.__unsafeRef(), Index);
+            set
+            {
+                funcs.ma_engine_listener_set_velocity(
+                    parent.__unsafeRef(),
+                    Index,
+                    value.X,
+                    value.Y,
+                    value.Z
+                );
+            }
+        }
+        public unsafe Vec3f WorldUp
+        {
+            get => funcs.ma_engine_listener_get_world_up(parent.__unsafeRef(), Index);
+            set
+            {
+                funcs.ma_engine_listener_set_world_up(
+                    parent.__unsafeRef(),
+                    Index,
+                    value.X,
+                    value.Y,
+                    value.Z
+                );
+            }
+        }
+        public unsafe Cone Cone
+        {
+            get
+            {
+                float pInnerAngleInRadians,
+                    pOuterAngleInRadians,
+                    pOuterGain;
+                funcs.ma_engine_listener_get_cone(
+                    parent.__unsafeRef(),
+                    Index,
+                    &pInnerAngleInRadians,
+                    &pOuterAngleInRadians,
+                    &pOuterGain
+                );
+                return new Cone(pInnerAngleInRadians, pOuterAngleInRadians, pOuterGain);
+            }
+            set =>
+                funcs.ma_engine_listener_set_cone(
+                    parent.__unsafeRef(),
+                    Index,
+                    value.InnerAngleInRadians,
+                    value.OuterAngleInRadians,
+                    value.OuterGain
+                );
+        }
+
+        public unsafe uint IsEnabled
+        {
+            get => funcs.ma_engine_listener_is_enabled(parent.__unsafeRef(), Index);
+            set => funcs.ma_engine_listener_set_enabled(parent.__unsafeRef(), Index, value);
+        }
     }
 
     public unsafe uint ListenerCount

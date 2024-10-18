@@ -101,15 +101,8 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
-<<<<<<< HEAD
         public static extern ma_result ma_log_postf(
             ma_log* pLog,
-=======
-#pragma warning disable CA1420 // Property, type, or attribute requires runtime marshalling
-		public static extern ma_result ma_log_postf(
-#pragma warning restore CA1420 // Property, type, or attribute requires runtime marshalling
-			ma_log* pLog,
->>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("ma_uint32")] uint level,
             [NativeTypeName("const char *")] sbyte* pFormat,
             __arglist
