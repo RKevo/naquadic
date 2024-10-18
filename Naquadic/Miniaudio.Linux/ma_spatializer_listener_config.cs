@@ -18,6 +18,6 @@ namespace Naquadic.Miniaudio.Linux
 
         public float speedOfSound;
 
-        public ma_vec3f worldUp;
+        public Vec3f worldUp;
     }
 }
