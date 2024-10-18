@@ -3,7 +3,7 @@ using static Naquadic.Miniaudio.Windows.ma_format;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public static unsafe partial class avx2
+    internal static unsafe partial class avx2
     {
         [DllImport(
             "miniaudio.dll",
@@ -101,8 +101,15 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern ma_result ma_log_postf(
             ma_log* pLog,
+=======
+#pragma warning disable CA1420 // Property, type, or attribute requires runtime marshalling
+		public static extern ma_result ma_log_postf(
+#pragma warning restore CA1420 // Property, type, or attribute requires runtime marshalling
+			ma_log* pLog,
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("ma_uint32")] uint level,
             [NativeTypeName("const char *")] sbyte* pFormat,
             __arglist
@@ -1744,7 +1751,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_spatializer_listener_get_position(
+=======
+        public static extern ma_vec3f ma_spatializer_listener_get_position(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_spatializer_listener *")] ma_spatializer_listener* pListener
         );
 
@@ -1765,7 +1776,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_spatializer_listener_get_direction(
+=======
+        public static extern ma_vec3f ma_spatializer_listener_get_direction(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_spatializer_listener *")] ma_spatializer_listener* pListener
         );
 
@@ -1786,7 +1801,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_spatializer_listener_get_velocity(
+=======
+        public static extern ma_vec3f ma_spatializer_listener_get_velocity(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_spatializer_listener *")] ma_spatializer_listener* pListener
         );
 
@@ -1826,7 +1845,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_spatializer_listener_get_world_up(
+=======
+        public static extern ma_vec3f ma_spatializer_listener_get_world_up(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_spatializer_listener *")] ma_spatializer_listener* pListener
         );
 
@@ -2169,7 +2192,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_spatializer_get_position(
+=======
+        public static extern ma_vec3f ma_spatializer_get_position(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer
         );
 
@@ -2190,7 +2217,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_spatializer_get_direction(
+=======
+        public static extern ma_vec3f ma_spatializer_get_direction(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer
         );
 
@@ -2211,7 +2242,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_spatializer_get_velocity(
+=======
+        public static extern ma_vec3f ma_spatializer_get_velocity(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer
         );
 
@@ -2223,8 +2258,13 @@ namespace Naquadic.Miniaudio.Windows
         public static extern void ma_spatializer_get_relative_position_and_direction(
             [NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer,
             [NativeTypeName("const ma_spatializer_listener *")] ma_spatializer_listener* pListener,
+<<<<<<< HEAD
             Vec3f* pRelativePos,
             Vec3f* pRelativeDir
+=======
+            ma_vec3f* pRelativePos,
+            ma_vec3f* pRelativeDir
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
         );
 
         [DllImport(
@@ -8265,7 +8305,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_engine_listener_get_position(
+=======
+        public static extern ma_vec3f ma_engine_listener_get_position(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_engine *")] ma_engine* pEngine,
             [NativeTypeName("ma_uint32")] uint listenerIndex
         );
@@ -8288,7 +8332,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_engine_listener_get_direction(
+=======
+        public static extern ma_vec3f ma_engine_listener_get_direction(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_engine *")] ma_engine* pEngine,
             [NativeTypeName("ma_uint32")] uint listenerIndex
         );
@@ -8311,7 +8359,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_engine_listener_get_velocity(
+=======
+        public static extern ma_vec3f ma_engine_listener_get_velocity(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_engine *")] ma_engine* pEngine,
             [NativeTypeName("ma_uint32")] uint listenerIndex
         );
@@ -8360,7 +8412,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_engine_listener_get_world_up(
+=======
+        public static extern ma_vec3f ma_engine_listener_get_world_up(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_engine *")] ma_engine* pEngine,
             [NativeTypeName("ma_uint32")] uint listenerIndex
         );
@@ -8654,7 +8710,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_get_direction_to_listener(
+=======
+        public static extern ma_vec3f ma_sound_get_direction_to_listener(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound *")] ma_sound* pSound
         );
 
@@ -8675,7 +8735,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_get_position(
+=======
+        public static extern ma_vec3f ma_sound_get_position(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound *")] ma_sound* pSound
         );
 
@@ -8696,7 +8760,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_get_direction(
+=======
+        public static extern ma_vec3f ma_sound_get_direction(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound *")] ma_sound* pSound
         );
 
@@ -8717,7 +8785,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_get_velocity(
+=======
+        public static extern ma_vec3f ma_sound_get_velocity(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound *")] ma_sound* pSound
         );
 
@@ -9348,7 +9420,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_group_get_direction_to_listener(
+=======
+        public static extern ma_vec3f ma_sound_group_get_direction_to_listener(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound_group *")] ma_sound* pGroup
         );
 
@@ -9369,7 +9445,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_group_get_position(
+=======
+        public static extern ma_vec3f ma_sound_group_get_position(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound_group *")] ma_sound* pGroup
         );
 
@@ -9390,7 +9470,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_group_get_direction(
+=======
+        public static extern ma_vec3f ma_sound_group_get_direction(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound_group *")] ma_sound* pGroup
         );
 
@@ -9411,7 +9495,11 @@ namespace Naquadic.Miniaudio.Windows
             CallingConvention = CallingConvention.Cdecl,
             ExactSpelling = true
         )]
+<<<<<<< HEAD
         public static extern Vec3f ma_sound_group_get_velocity(
+=======
+        public static extern ma_vec3f ma_sound_group_get_velocity(
+>>>>>>> 2b3dc91df8caf548fb40418778ecd27556d087aa
             [NativeTypeName("const ma_sound_group *")] ma_sound* pGroup
         );
 

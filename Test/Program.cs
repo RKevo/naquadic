@@ -1,19 +1,23 @@
-﻿using Naquadic.Miniaudio.Windows;
+﻿using Naquadic.Logging;
+using Naquadic.Miniaudio.Windows;
 
 class Program
 {
     static void Main(string[] args)
     {
-        unsafe
-        {
-            ma_result result;
-            ma_engine engine;
+        TestLog();
+    }
 
-            result = avx2.ma_engine_init(null, &engine);
-            if (result != ma_result.MA_SUCCESS)
-            {
-                Console.WriteLine(result);
-            }
-        }
+    public static void TestLog()
+    {
+        Logger.Info("Log");
+        Logger.InfoTimestamped("LogTimestamped");
+        Logger.InfoDebug(ins: "LogDebug");
+        Logger.Warn("Log");
+        Logger.WarnTimestamped("LogTimestamped");
+        Logger.WarnDebug(ins: "LogDebug");
+        Logger.Error("Log");
+        Logger.ErrorTimestamped("LogTimestamped");
+        Logger.ErrorDebug(ins: "LogDebug");
     }
 }
