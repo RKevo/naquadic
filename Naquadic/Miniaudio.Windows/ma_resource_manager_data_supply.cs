@@ -6,22 +6,22 @@ namespace Naquadic.Miniaudio.Windows
     {
         public ma_resource_manager_data_supply_type type;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L10324_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L10334_C5")]
         public _backend_e__Union backend;
 
         [StructLayout(LayoutKind.Explicit)]
         public partial struct _backend_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L10326_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L10336_C9")]
             public _encoded_e__Struct encoded;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L10331_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L10341_C9")]
             public _decoded_e__Struct decoded;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L10340_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L10350_C9")]
             public _decodedPaged_e__Struct decodedPaged;
 
             public unsafe partial struct _encoded_e__Struct

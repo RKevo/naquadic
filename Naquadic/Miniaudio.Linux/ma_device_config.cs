@@ -43,28 +43,28 @@ namespace Naquadic.Miniaudio.Linux
 
         public ma_resampler_config resampling;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7054_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7064_C5")]
         public _playback_e__Struct playback;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7064_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7074_C5")]
         public _capture_e__Struct capture;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7075_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7085_C5")]
         public _wasapi_e__Struct wasapi;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7085_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7095_C5")]
         public _alsa_e__Struct alsa;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7092_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7102_C5")]
         public _pulse_e__Struct pulse;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7097_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7107_C5")]
         public _coreaudio_e__Struct coreaudio;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7101_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7111_C5")]
         public _opensl_e__Struct opensl;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7107_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7117_C5")]
         public _aaudio_e__Struct aaudio;
 
         public unsafe partial struct _playback_e__Struct

@@ -18,6 +18,7 @@ namespace Naquadic.Miniaudio.Windows
 
         public float speedOfSound;
 
+        [NativeTypeName("ma_vec3f")]
         public Naquadic.Common.Spatial.Vec3f worldUp;
     }
 }

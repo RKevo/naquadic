@@ -41,7 +41,7 @@ namespace Naquadic.Miniaudio.Linux
         [NativeTypeName("ma_uint32")]
         public uint pinnedListenerIndex;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L11084_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L11094_C5")]
         public _fadeSettings_e__Struct fadeSettings;
 
         [NativeTypeName("ma_bool8")]

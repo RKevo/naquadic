@@ -32,7 +32,7 @@ namespace Naquadic.Miniaudio.Linux
 
         public ma_atomic_bool32 isConnectorInitialized;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L10376_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L10386_C5")]
         public _connector_e__Union connector;
 
         [StructLayout(LayoutKind.Explicit)]

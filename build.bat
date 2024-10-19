@@ -1,6 +1,6 @@
-@(Windows)
+echo Compiling Dll...
 gcc -msse2 -mavx2 -O3 -Os -ftree-vectorize -c miniaudio.c -o miniaudio.o -m64
 gcc -shared -o Naquadic/miniaudio.dll miniaudio.o -W
-@(Linux)
+echo Compiling So...
 gcc -msse2 -mavx2 -O3 -Os -ftree-vectorize -c miniaudio.c -o miniaudio.o -fPIC -ldl -lpthread -lm -m64
 gcc -shared -o Naquadic/miniaudio.so miniaudio.o

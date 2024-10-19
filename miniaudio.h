@@ -5084,6 +5084,15 @@ typedef struct
     float z;
 } ma_vec3f;
 
+MA_API ma_vec3f ma_vec3f_sub(ma_vec3f a, ma_vec3f b);
+MA_API ma_vec3f ma_vec3f_neg(ma_vec3f a);
+MA_API float ma_vec3f_dot(ma_vec3f a, ma_vec3f b);
+MA_API float ma_vec3f_len2(ma_vec3f v);
+MA_API float ma_vec3f_len(ma_vec3f v);
+MA_API float ma_vec3f_dist(ma_vec3f a, ma_vec3f b);
+MA_API ma_vec3f ma_vec3f_normalize(ma_vec3f v);
+MA_API ma_vec3f ma_vec3f_cross(ma_vec3f a, ma_vec3f b);
+
 typedef struct
 {
     ma_vec3f v;
@@ -5124,6 +5133,7 @@ typedef struct
 } ma_spatializer_listener_config;
 
 MA_API ma_spatializer_listener_config ma_spatializer_listener_config_init(ma_uint32 channelsOut);
+MA_API ma_vec3f ma_vec3f_init_3f(float x, float y, float z);
 
 
 typedef struct
@@ -49473,6 +49483,7 @@ MA_API float ma_fader_get_current_volume(const ma_fader* pFader)
 
 
 
+/* Impl */
 
 
 MA_API ma_vec3f ma_vec3f_init_3f(float x, float y, float z)

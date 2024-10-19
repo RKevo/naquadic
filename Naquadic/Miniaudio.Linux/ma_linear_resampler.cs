@@ -18,10 +18,10 @@ namespace Naquadic.Miniaudio.Linux
         [NativeTypeName("ma_uint32")]
         public uint inTimeFrac;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L5294_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L5304_C5")]
         public _x0_e__Union x0;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L5299_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L5309_C5")]
         public _x1_e__Union x1;
 
         public ma_lpf lpf;

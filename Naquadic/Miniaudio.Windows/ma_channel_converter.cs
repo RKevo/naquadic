@@ -25,7 +25,7 @@ namespace Naquadic.Miniaudio.Windows
         [NativeTypeName("ma_uint8 *")]
         public byte* pShuffleTable;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L5512_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L5522_C5")]
         public _weights_e__Union weights;
 
         public void* _pHeap;

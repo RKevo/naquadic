@@ -62,16 +62,16 @@ namespace Naquadic.Miniaudio.Linux
 
         public ma_duplex_rb duplexRB;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7731_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7741_C5")]
         public _resampling_e__Struct resampling;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7741_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7751_C5")]
         public _playback_e__Struct playback;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7767_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7777_C5")]
         public _capture_e__Struct capture;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7790_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7800_C5")]
         public _Anonymous_e__Union Anonymous;
 
         [UnscopedRef]
@@ -132,7 +132,7 @@ namespace Naquadic.Miniaudio.Linux
 
             public void* pBackendUserData;
 
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7736_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7746_C9")]
             public _linear_e__Struct linear;
 
             public partial struct _linear_e__Struct
@@ -297,23 +297,23 @@ namespace Naquadic.Miniaudio.Linux
         public partial struct _Anonymous_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7793_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7803_C9")]
             public _wasapi_e__Struct wasapi;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7834_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7844_C9")]
             public _dsound_e__Struct dsound;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7844_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7854_C9")]
             public _winmm_e__Struct winmm;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7887_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7897_C9")]
             public _jack_e__Struct jack;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7984_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7994_C9")]
             public _null_device_e__Struct null_device;
 
             public unsafe partial struct _wasapi_e__Struct

@@ -13,14 +13,16 @@ generate-aggressive-inlining
 generate-cpp-attributes
 generate-unmanaged-constants
 generate-native-bitfield-attribute
--a
--msse2
--mavx2
--x
-c
+--additional
+-m64
 --libraryPath 
 miniaudio.so
 --traverse
 ./miniaudio.h
 --include-directory
 C:\llvm-mingw\lib\clang\18\include
+--with-access-specifier *=Internal
+--remap
+ma_vec3f=Naquadic.Common.Spatial.Vec3f
+--exclude
+ma_vec3f

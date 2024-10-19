@@ -10,7 +10,7 @@ namespace Naquadic.Miniaudio.Windows
 
         public ma_lcg lcg;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L10183_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L10193_C5")]
         public _state_e__Union state;
 
         public void* _pHeap;
@@ -22,11 +22,11 @@ namespace Naquadic.Miniaudio.Windows
         public partial struct _state_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L10185_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L10195_C9")]
             public _pink_e__Struct pink;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L10191_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L10201_C9")]
             public _brownian_e__Struct brownian;
 
             public unsafe partial struct _pink_e__Struct

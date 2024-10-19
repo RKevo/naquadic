@@ -22,7 +22,7 @@ namespace Naquadic.Miniaudio.Linux
         [NativeTypeName("ma_uint32")]
         public uint sampleRateOut;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L5374_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L5384_C5")]
         public _state_e__Union state;
 
         public void* _pHeap;

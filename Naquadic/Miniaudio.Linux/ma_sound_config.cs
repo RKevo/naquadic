@@ -6,7 +6,7 @@ namespace Naquadic.Miniaudio.Linux
         public sbyte* pFilePath;
 
         [NativeTypeName("const wchar_t *")]
-        public ushort* pFilePathW;
+        public uint* pFilePathW;
 
         [NativeTypeName("ma_data_source *")]
         public void* pDataSource;

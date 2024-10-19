@@ -25,14 +25,14 @@ namespace Naquadic.Miniaudio.Windows
 
         public void* pInternalEncoder;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L10067_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L10077_C5")]
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
         public partial struct _data_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L10069_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L10079_C9")]
             public _vfs_e__Struct vfs;
 
             public unsafe partial struct _vfs_e__Struct

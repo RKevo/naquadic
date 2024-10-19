@@ -15,7 +15,7 @@ namespace Naquadic.Miniaudio.Windows
         [NativeTypeName("ma_uint32")]
         public uint nativeDataFormatCount;
 
-        [NativeTypeName("struct (anonymous struct at ./miniaudio.h:7028:5)[64]")]
+        [NativeTypeName("struct (anonymous struct at ./miniaudio.h:7038:5)[64]")]
         public _nativeDataFormats_e__FixedBuffer nativeDataFormats;
 
         public partial struct _Anonymous_e__Struct

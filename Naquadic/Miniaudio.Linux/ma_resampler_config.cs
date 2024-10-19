@@ -19,7 +19,7 @@ namespace Naquadic.Miniaudio.Linux
 
         public void* pBackendUserData;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L5357_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L5367_C5")]
         public _linear_e__Struct linear;
 
         public partial struct _linear_e__Struct

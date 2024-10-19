@@ -40,10 +40,10 @@ namespace Naquadic.Miniaudio.Windows
 
         public ma_device_info* pDeviceInfos;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7318_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7328_C5")]
         public _Anonymous1_e__Union Anonymous1;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7672_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7682_C5")]
         public _Anonymous2_e__Union Anonymous2;
 
         [UnscopedRef]
@@ -120,23 +120,23 @@ namespace Naquadic.Miniaudio.Windows
         public partial struct _Anonymous1_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7321_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7331_C9")]
             public _wasapi_e__Struct wasapi;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7337_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7347_C9")]
             public _dsound_e__Struct dsound;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7347_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7357_C9")]
             public _winmm_e__Struct winmm;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7517_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7527_C9")]
             public _jack_e__Struct jack;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7665_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7675_C9")]
             public _null_backend_e__Struct null_backend;
 
             public unsafe partial struct _wasapi_e__Struct
@@ -326,7 +326,7 @@ namespace Naquadic.Miniaudio.Windows
         public partial struct _Anonymous2_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7675_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7685_C9")]
             public _win32_e__Struct win32;
 
             [FieldOffset(0)]

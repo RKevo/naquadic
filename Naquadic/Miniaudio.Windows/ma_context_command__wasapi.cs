@@ -9,22 +9,22 @@ namespace Naquadic.Miniaudio.Windows
         [NativeTypeName("ma_event *")]
         public void** pEvent;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7280_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7290_C5")]
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
         public partial struct _data_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7282_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7292_C9")]
             public _quit_e__Struct quit;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7286_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7296_C9")]
             public _createAudioClient_e__Struct createAudioClient;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L7293_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L7303_C9")]
             public _releaseAudioClient_e__Struct releaseAudioClient;
 
             public partial struct _quit_e__Struct

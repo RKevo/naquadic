@@ -51,18 +51,18 @@ namespace Naquadic.Miniaudio.Linux
 
         public ma_allocation_callbacks allocationCallbacks;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L9936_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L9946_C5")]
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
         public partial struct _data_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L9938_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L9948_C9")]
             public _vfs_e__Struct vfs;
 
             [FieldOffset(0)]
-            [NativeTypeName("__AnonymousRecord_miniaudio_L9943_C9")]
+            [NativeTypeName("__AnonymousRecord_miniaudio_L9953_C9")]
             public _memory_e__Struct memory;
 
             public unsafe partial struct _vfs_e__Struct

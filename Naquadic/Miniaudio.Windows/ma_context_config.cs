@@ -13,16 +13,16 @@ namespace Naquadic.Miniaudio.Windows
 
         public ma_allocation_callbacks allocationCallbacks;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7250_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7260_C5")]
         public _alsa_e__Struct alsa;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7254_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7264_C5")]
         public _pulse_e__Struct pulse;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7260_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7270_C5")]
         public _coreaudio_e__Struct coreaudio;
 
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7267_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7277_C5")]
         public _jack_e__Struct jack;
 
         public ma_backend_callbacks custom;

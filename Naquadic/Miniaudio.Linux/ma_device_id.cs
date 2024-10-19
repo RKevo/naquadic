@@ -58,7 +58,7 @@ namespace Naquadic.Miniaudio.Linux
         public _webaudio_e__FixedBuffer webaudio;
 
         [FieldOffset(0)]
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7000_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7010_C5")]
         public _custom_e__Union custom;
 
         [FieldOffset(0)]
@@ -87,7 +87,7 @@ namespace Naquadic.Miniaudio.Linux
         [InlineArray(64)]
         public partial struct _wasapi_e__FixedBuffer
         {
-            public ushort e0;
+            public uint e0;
         }
 
         [InlineArray(16)]

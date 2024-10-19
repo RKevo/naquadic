@@ -58,7 +58,7 @@ namespace Naquadic.Miniaudio.Windows
         public _webaudio_e__FixedBuffer webaudio;
 
         [FieldOffset(0)]
-        [NativeTypeName("__AnonymousRecord_miniaudio_L7000_C5")]
+        [NativeTypeName("__AnonymousRecord_miniaudio_L7010_C5")]
         public _custom_e__Union custom;
 
         [FieldOffset(0)]

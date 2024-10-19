@@ -6,7 +6,7 @@ namespace Naquadic.Miniaudio.Linux
         public sbyte* pFilePath;
 
         [NativeTypeName("const wchar_t *")]
-        public ushort* pFilePathW;
+        public uint* pFilePathW;
 
         [NativeTypeName("const ma_resource_manager_pipeline_notifications *")]
         public ma_resource_manager_pipeline_notifications* pNotifications;

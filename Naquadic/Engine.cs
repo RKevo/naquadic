@@ -5,6 +5,7 @@ namespace Naquadic.Thin;
 public class Engine : IDisposable
 {
     private ma_engine _engine;
+    private unsafe ma_engine* _ref;
     private bool _disposed;
 
     public unsafe Engine()
@@ -18,6 +19,7 @@ public class Engine : IDisposable
         {
             Console.WriteLine($"Engine initialiation error: {result}");
         }
+        _ref = __unsafeRef();
     }
 
     public unsafe Engine(EngineConfig config)
@@ -33,7 +35,7 @@ public class Engine : IDisposable
         }
     }
 
-    public unsafe ma_engine* __unsafeRef()
+    protected unsafe ma_engine* __unsafeRef()
     {
         fixed (ma_engine* c = &_engine)
         {
@@ -44,114 +46,48 @@ public class Engine : IDisposable
     public unsafe void Start()
     {
         ma_result result;
-        fixed (ma_engine* e = &_engine)
-        {
-            result = funcs.ma_engine_start(e);
-        }
+        result = funcs.ma_engine_start(_ref);
         Console.WriteLine($"Engine start error: {result}");
     }
 
     public unsafe void Stop()
     {
         ma_result result;
-        fixed (ma_engine* e = &_engine)
-        {
-            result = funcs.ma_engine_stop(e);
-        }
+        result = funcs.ma_engine_stop(_ref);
         Console.WriteLine($"Engine stop error: {result}");
     }
 
     public unsafe ulong Time
     {
-        get
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                return funcs.ma_engine_get_time_in_pcm_frames(e);
-            }
-        }
-        set
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                funcs.ma_engine_set_time_in_pcm_frames(e, value);
-            }
-        }
+        get => funcs.ma_engine_get_time_in_pcm_frames(_ref);
+        set => funcs.ma_engine_set_time_in_pcm_frames(_ref, value);
     }
     public unsafe ulong TimeMsec
     {
-        get
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                return funcs.ma_engine_get_time_in_milliseconds(e);
-            }
-        }
-        set
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                funcs.ma_engine_set_time_in_milliseconds(e, value);
-            }
-        }
+        get => funcs.ma_engine_get_time_in_milliseconds(_ref);
+        set => funcs.ma_engine_set_time_in_milliseconds(_ref, value);
     }
 
     public unsafe uint Channels
     {
-        get
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                return funcs.ma_engine_get_channels(e);
-            }
-        }
+        get { return funcs.ma_engine_get_channels(_ref); }
     }
 
     public unsafe uint SampleRate
     {
-        get
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                return funcs.ma_engine_get_sample_rate(e);
-            }
-        }
+        get { return funcs.ma_engine_get_sample_rate(_ref); }
     }
 
     public unsafe float Volume
     {
-        get
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                return funcs.ma_engine_get_volume(e);
-            }
-        }
-        set
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                funcs.ma_engine_set_volume(e, value);
-            }
-        }
+        get => funcs.ma_engine_get_volume(_ref);
+        set => funcs.ma_engine_set_volume(_ref, value);
     }
 
     public unsafe float Gain
     {
-        get
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                return funcs.ma_engine_get_gain_db(e);
-            }
-        }
-        set
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                funcs.ma_engine_set_gain_db(e, value);
-            }
-        }
+        get => funcs.ma_engine_get_gain_db(_ref);
+        set => funcs.ma_engine_set_gain_db(_ref, value);
     }
 
     public record Listener(uint Index)
@@ -160,8 +96,7 @@ public class Engine : IDisposable
         public unsafe Vec3f Position
         {
             get => funcs.ma_engine_listener_get_position(parent.__unsafeRef(), Index);
-            set
-            {
+            set =>
                 funcs.ma_engine_listener_set_position(
                     parent.__unsafeRef(),
                     Index,
@@ -169,13 +104,11 @@ public class Engine : IDisposable
                     value.Y,
                     value.Z
                 );
-            }
         }
         public unsafe Vec3f Direction
         {
             get => funcs.ma_engine_listener_get_direction(parent.__unsafeRef(), Index);
-            set
-            {
+            set =>
                 funcs.ma_engine_listener_set_direction(
                     parent.__unsafeRef(),
                     Index,
@@ -183,13 +116,11 @@ public class Engine : IDisposable
                     value.Y,
                     value.Z
                 );
-            }
         }
         public unsafe Vec3f Velocity
         {
             get => funcs.ma_engine_listener_get_velocity(parent.__unsafeRef(), Index);
-            set
-            {
+            set =>
                 funcs.ma_engine_listener_set_velocity(
                     parent.__unsafeRef(),
                     Index,
@@ -197,13 +128,11 @@ public class Engine : IDisposable
                     value.Y,
                     value.Z
                 );
-            }
         }
         public unsafe Vec3f WorldUp
         {
             get => funcs.ma_engine_listener_get_world_up(parent.__unsafeRef(), Index);
-            set
-            {
+            set =>
                 funcs.ma_engine_listener_set_world_up(
                     parent.__unsafeRef(),
                     Index,
@@ -211,7 +140,6 @@ public class Engine : IDisposable
                     value.Y,
                     value.Z
                 );
-            }
         }
         public unsafe Cone Cone
         {
@@ -248,24 +176,12 @@ public class Engine : IDisposable
 
     public unsafe uint ListenerCount
     {
-        get
-        {
-            fixed (ma_engine* e = &_engine)
-            {
-                return funcs.ma_engine_get_listener_count(e);
-            }
-        }
+        get => funcs.ma_engine_get_listener_count(_ref);
     }
 
     public unsafe Listener FindClosestListener(float x, float y, float z)
     {
-        fixed (ma_engine* e = &_engine)
-        {
-            return new Listener(funcs.ma_engine_find_closest_listener(e, x, y, z))
-            {
-                parent = this
-            };
-        }
+        return new Listener(funcs.ma_engine_find_closest_listener(_ref, x, y, z)) { parent = this };
     }
 
     /* -- Disposal --*/
