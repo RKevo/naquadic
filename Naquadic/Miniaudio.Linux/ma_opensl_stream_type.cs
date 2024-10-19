@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_opensl_stream_type
+    internal enum ma_opensl_stream_type
     {
         ma_opensl_stream_type_default = 0,
         ma_opensl_stream_type_voice,

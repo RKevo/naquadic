@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_decoder_config
+    internal unsafe partial struct ma_decoder_config
     {
         public ma_format format;
 

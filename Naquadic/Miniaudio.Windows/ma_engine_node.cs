@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_engine_node
+    internal unsafe partial struct ma_engine_node
     {
         public ma_node_base baseNode;
 
@@ -49,7 +49,7 @@ namespace Naquadic.Miniaudio.Windows
 
         public void* _pHeap;
 
-        public partial struct _fadeSettings_e__Struct
+        internal partial struct _fadeSettings_e__Struct
         {
             public ma_atomic_float volumeBeg;
 

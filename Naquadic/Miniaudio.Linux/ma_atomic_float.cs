@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_atomic_float
+    internal partial struct ma_atomic_float
     {
         [NativeTypeName("ma_float")]
         public float value;

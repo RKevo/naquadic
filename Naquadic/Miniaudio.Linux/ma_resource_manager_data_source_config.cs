@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_resource_manager_data_source_config
+    internal unsafe partial struct ma_resource_manager_data_source_config
     {
         [NativeTypeName("const char *")]
         public sbyte* pFilePath;

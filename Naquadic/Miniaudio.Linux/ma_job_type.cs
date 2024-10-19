@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_job_type
+    internal enum ma_job_type
     {
         MA_JOB_TYPE_QUIT = 0,
         MA_JOB_TYPE_CUSTOM,

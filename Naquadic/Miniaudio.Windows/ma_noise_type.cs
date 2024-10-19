@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_noise_type
+    internal enum ma_noise_type
     {
         ma_noise_type_white,
         ma_noise_type_pink,

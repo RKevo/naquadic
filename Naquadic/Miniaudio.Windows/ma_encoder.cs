@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_encoder
+    internal unsafe partial struct ma_encoder
     {
         public ma_encoder_config config;
 
@@ -29,13 +29,13 @@ namespace Naquadic.Miniaudio.Windows
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _data_e__Union
+        internal partial struct _data_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L10079_C9")]
             public _vfs_e__Struct vfs;
 
-            public unsafe partial struct _vfs_e__Struct
+            internal unsafe partial struct _vfs_e__Struct
             {
                 [NativeTypeName("ma_vfs *")]
                 public void* pVFS;

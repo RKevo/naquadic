@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_job_queue
+    internal unsafe partial struct ma_job_queue
     {
         [NativeTypeName("ma_uint32")]
         public uint flags;

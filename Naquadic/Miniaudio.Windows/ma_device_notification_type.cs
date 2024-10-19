@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_device_notification_type
+    internal enum ma_device_notification_type
     {
         ma_device_notification_type_started,
         ma_device_notification_type_stopped,

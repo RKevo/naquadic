@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_context_config
+    internal unsafe partial struct ma_context_config
     {
         public ma_log* pLog;
 
@@ -27,13 +27,13 @@ namespace Naquadic.Miniaudio.Linux
 
         public ma_backend_callbacks custom;
 
-        public partial struct _alsa_e__Struct
+        internal partial struct _alsa_e__Struct
         {
             [NativeTypeName("ma_bool32")]
             public uint useVerboseDeviceEnumeration;
         }
 
-        public unsafe partial struct _pulse_e__Struct
+        internal unsafe partial struct _pulse_e__Struct
         {
             [NativeTypeName("const char *")]
             public sbyte* pApplicationName;
@@ -45,7 +45,7 @@ namespace Naquadic.Miniaudio.Linux
             public uint tryAutoSpawn;
         }
 
-        public partial struct _coreaudio_e__Struct
+        internal partial struct _coreaudio_e__Struct
         {
             public ma_ios_session_category sessionCategory;
 
@@ -59,7 +59,7 @@ namespace Naquadic.Miniaudio.Linux
             public uint noAudioSessionDeactivate;
         }
 
-        public unsafe partial struct _jack_e__Struct
+        internal unsafe partial struct _jack_e__Struct
         {
             [NativeTypeName("const char *")]
             public sbyte* pClientName;

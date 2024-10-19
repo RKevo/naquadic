@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_hpf_node
+    internal partial struct ma_hpf_node
     {
         public ma_node_base baseNode;
 

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_fence
+    internal unsafe partial struct ma_fence
     {
         [NativeTypeName("ma_event")]
         public void* e;

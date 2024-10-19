@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum _ma_channel_position
+    internal enum _ma_channel_position
     {
         MA_CHANNEL_NONE = 0,
         MA_CHANNEL_MONO = 1,

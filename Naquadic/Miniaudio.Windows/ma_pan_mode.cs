@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_pan_mode
+    internal enum ma_pan_mode
     {
         ma_pan_mode_balance = 0,
         ma_pan_mode_pan,

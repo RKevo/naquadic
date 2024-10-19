@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_resource_manager_config
+    internal unsafe partial struct ma_resource_manager_config
     {
         public ma_allocation_callbacks allocationCallbacks;
 

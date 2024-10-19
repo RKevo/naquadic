@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_device_state
+    internal enum ma_device_state
     {
         ma_device_state_uninitialized = 0,
         ma_device_state_stopped = 1,

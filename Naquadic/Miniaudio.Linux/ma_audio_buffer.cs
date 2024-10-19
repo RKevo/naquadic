@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_audio_buffer
+    internal partial struct ma_audio_buffer
     {
         public ma_audio_buffer_ref @ref;
 

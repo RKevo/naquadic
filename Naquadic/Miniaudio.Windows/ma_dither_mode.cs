@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_dither_mode
+    internal enum ma_dither_mode
     {
         ma_dither_mode_none = 0,
         ma_dither_mode_rectangle,

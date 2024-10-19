@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_resource_manager_data_buffer_node
+    internal unsafe partial struct ma_resource_manager_data_buffer_node
     {
         [NativeTypeName("ma_uint32")]
         public uint hashedName32;

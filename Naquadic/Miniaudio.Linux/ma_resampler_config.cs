@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_resampler_config
+    internal unsafe partial struct ma_resampler_config
     {
         public ma_format format;
 
@@ -22,7 +22,7 @@ namespace Naquadic.Miniaudio.Linux
         [NativeTypeName("__AnonymousRecord_miniaudio_L5367_C5")]
         public _linear_e__Struct linear;
 
-        public partial struct _linear_e__Struct
+        internal partial struct _linear_e__Struct
         {
             [NativeTypeName("ma_uint32")]
             public uint lpfOrder;

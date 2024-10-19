@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_resource_manager_data_stream
+    internal unsafe partial struct ma_resource_manager_data_stream
     {
         public ma_data_source_base ds;
 

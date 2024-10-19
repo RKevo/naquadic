@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_pulsewave_config
+    internal partial struct ma_pulsewave_config
     {
         public ma_format format;
 

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_fader_config
+    internal partial struct ma_fader_config
     {
         public ma_format format;
 

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_sound_inlined
+    internal unsafe partial struct ma_sound_inlined
     {
         public ma_sound sound;
 

@@ -1,3 +1,4 @@
+@remap.rsp
 -f
 ./miniaudio.h
 -o
@@ -21,8 +22,5 @@ miniaudio.dll
 ./miniaudio.h
 --include-directory
 C:\llvm-mingw\lib\clang\18\include
---with-access-specifier *=Internal
---remap
-ma_vec3f=Naquadic.Common.Spatial.Vec3f
---exclude
-ma_vec3f
+--with-access-specifier 
+*=Internal

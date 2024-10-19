@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_thread_priority
+    internal enum ma_thread_priority
     {
         ma_thread_priority_idle = -5,
         ma_thread_priority_lowest = -4,

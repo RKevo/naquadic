@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_node_output_bus
+    internal unsafe partial struct ma_node_output_bus
     {
         [NativeTypeName("ma_node *")]
         public void* pNode;

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_hpf
+    internal unsafe partial struct ma_hpf
     {
         public ma_format format;
 

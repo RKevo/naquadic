@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_atomic_vec3f
+    internal partial struct ma_atomic_vec3f
     {
         [NativeTypeName("ma_vec3f")]
         public Naquadic.Common.Spatial.Vec3f v;

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_rb
+    internal unsafe partial struct ma_rb
     {
         public void* pBuffer;
 

@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace Naquadic.Miniaudio.Windows
 {
     [StructLayout(LayoutKind.Explicit)]
-    public partial struct ma_biquad_coefficient
+    internal partial struct ma_biquad_coefficient
     {
         [FieldOffset(0)]
         public float f32;

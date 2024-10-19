@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_opensl_recording_preset
+    internal enum ma_opensl_recording_preset
     {
         ma_opensl_recording_preset_default = 0,
         ma_opensl_recording_preset_generic,

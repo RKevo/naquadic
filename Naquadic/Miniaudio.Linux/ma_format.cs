@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_format
+    internal enum ma_format
     {
         ma_format_unknown = 0,
         ma_format_u8 = 1,

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_waveform_type
+    internal enum ma_waveform_type
     {
         ma_waveform_type_sine,
         ma_waveform_type_square,

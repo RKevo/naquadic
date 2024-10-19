@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_paged_audio_buffer_page
+    internal unsafe partial struct ma_paged_audio_buffer_page
     {
         public ma_paged_audio_buffer_page* pNext;
 

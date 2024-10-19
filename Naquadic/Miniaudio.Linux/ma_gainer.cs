@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_gainer
+    internal unsafe partial struct ma_gainer
     {
         public ma_gainer_config config;
 

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_bpf2_config
+    internal partial struct ma_bpf2_config
     {
         public ma_format format;
 

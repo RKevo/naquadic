@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_aaudio_allowed_capture_policy
+    internal enum ma_aaudio_allowed_capture_policy
     {
         ma_aaudio_allow_capture_default = 0,
         ma_aaudio_allow_capture_by_all,

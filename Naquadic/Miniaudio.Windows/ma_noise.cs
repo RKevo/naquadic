@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_noise
+    internal unsafe partial struct ma_noise
     {
         public ma_data_source_base ds;
 
@@ -19,7 +19,7 @@ namespace Naquadic.Miniaudio.Windows
         public uint _ownsHeap;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _state_e__Union
+        internal partial struct _state_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L10195_C9")]
@@ -29,7 +29,7 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("__AnonymousRecord_miniaudio_L10201_C9")]
             public _brownian_e__Struct brownian;
 
-            public unsafe partial struct _pink_e__Struct
+            internal unsafe partial struct _pink_e__Struct
             {
                 public double** bin;
 
@@ -39,7 +39,7 @@ namespace Naquadic.Miniaudio.Windows
                 public uint* counter;
             }
 
-            public unsafe partial struct _brownian_e__Struct
+            internal unsafe partial struct _brownian_e__Struct
             {
                 public double* accumulation;
             }

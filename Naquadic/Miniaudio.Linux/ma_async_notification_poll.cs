@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_async_notification_poll
+    internal partial struct ma_async_notification_poll
     {
         public ma_async_notification_callbacks cb;
 

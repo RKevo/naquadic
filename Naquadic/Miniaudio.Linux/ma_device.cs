@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_device
+    internal unsafe partial struct ma_device
     {
         public ma_context* pContext;
 
@@ -75,7 +75,7 @@ namespace Naquadic.Miniaudio.Linux
         public _Anonymous_e__Union Anonymous;
 
         [UnscopedRef]
-        public ref _Anonymous_e__Union._wasapi_e__Struct wasapi
+        internal ref _Anonymous_e__Union._wasapi_e__Struct wasapi
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -85,7 +85,7 @@ namespace Naquadic.Miniaudio.Linux
         }
 
         [UnscopedRef]
-        public ref _Anonymous_e__Union._dsound_e__Struct dsound
+        internal ref _Anonymous_e__Union._dsound_e__Struct dsound
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -95,7 +95,7 @@ namespace Naquadic.Miniaudio.Linux
         }
 
         [UnscopedRef]
-        public ref _Anonymous_e__Union._winmm_e__Struct winmm
+        internal ref _Anonymous_e__Union._winmm_e__Struct winmm
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -105,7 +105,7 @@ namespace Naquadic.Miniaudio.Linux
         }
 
         [UnscopedRef]
-        public ref _Anonymous_e__Union._jack_e__Struct jack
+        internal ref _Anonymous_e__Union._jack_e__Struct jack
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -115,7 +115,7 @@ namespace Naquadic.Miniaudio.Linux
         }
 
         [UnscopedRef]
-        public ref _Anonymous_e__Union._null_device_e__Struct null_device
+        internal ref _Anonymous_e__Union._null_device_e__Struct null_device
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -124,7 +124,7 @@ namespace Naquadic.Miniaudio.Linux
             }
         }
 
-        public unsafe partial struct _resampling_e__Struct
+        internal unsafe partial struct _resampling_e__Struct
         {
             public ma_resample_algorithm algorithm;
 
@@ -135,14 +135,14 @@ namespace Naquadic.Miniaudio.Linux
             [NativeTypeName("__AnonymousRecord_miniaudio_L7746_C9")]
             public _linear_e__Struct linear;
 
-            public partial struct _linear_e__Struct
+            internal partial struct _linear_e__Struct
             {
                 [NativeTypeName("ma_uint32")]
                 public uint lpfOrder;
             }
         }
 
-        public unsafe partial struct _playback_e__Struct
+        internal unsafe partial struct _playback_e__Struct
         {
             public ma_device_id* pID;
 
@@ -223,7 +223,7 @@ namespace Naquadic.Miniaudio.Linux
             }
         }
 
-        public unsafe partial struct _capture_e__Struct
+        internal unsafe partial struct _capture_e__Struct
         {
             public ma_device_id* pID;
 
@@ -294,7 +294,7 @@ namespace Naquadic.Miniaudio.Linux
         }
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _Anonymous_e__Union
+        internal partial struct _Anonymous_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L7803_C9")]
@@ -316,7 +316,7 @@ namespace Naquadic.Miniaudio.Linux
             [NativeTypeName("__AnonymousRecord_miniaudio_L7994_C9")]
             public _null_device_e__Struct null_device;
 
-            public unsafe partial struct _wasapi_e__Struct
+            internal unsafe partial struct _wasapi_e__Struct
             {
                 [NativeTypeName("ma_ptr")]
                 public void* pAudioClientPlayback;
@@ -419,7 +419,7 @@ namespace Naquadic.Miniaudio.Linux
                 public void* rerouteLock;
             }
 
-            public unsafe partial struct _dsound_e__Struct
+            internal unsafe partial struct _dsound_e__Struct
             {
                 [NativeTypeName("ma_ptr")]
                 public void* pPlayback;
@@ -437,7 +437,7 @@ namespace Naquadic.Miniaudio.Linux
                 public void* pCaptureBuffer;
             }
 
-            public unsafe partial struct _winmm_e__Struct
+            internal unsafe partial struct _winmm_e__Struct
             {
                 [NativeTypeName("ma_handle")]
                 public void* hDevicePlayback;
@@ -482,7 +482,7 @@ namespace Naquadic.Miniaudio.Linux
                 public byte* _pHeapData;
             }
 
-            public unsafe partial struct _jack_e__Struct
+            internal unsafe partial struct _jack_e__Struct
             {
                 [NativeTypeName("ma_ptr")]
                 public void* pClient;
@@ -498,7 +498,7 @@ namespace Naquadic.Miniaudio.Linux
                 public float* pIntermediaryBufferCapture;
             }
 
-            public unsafe partial struct _null_device_e__Struct
+            internal unsafe partial struct _null_device_e__Struct
             {
                 [NativeTypeName("ma_thread")]
                 public void* deviceThread;

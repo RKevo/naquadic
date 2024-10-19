@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_channel_mix_mode
+    internal enum ma_channel_mix_mode
     {
         ma_channel_mix_mode_rectangular = 0,
         ma_channel_mix_mode_simple,

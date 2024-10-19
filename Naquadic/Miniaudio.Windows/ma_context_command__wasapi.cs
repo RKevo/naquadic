@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_context_command__wasapi
+    internal unsafe partial struct ma_context_command__wasapi
     {
         public int code;
 
@@ -13,7 +13,7 @@ namespace Naquadic.Miniaudio.Windows
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _data_e__Union
+        internal partial struct _data_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L7292_C9")]
@@ -27,12 +27,12 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("__AnonymousRecord_miniaudio_L7303_C9")]
             public _releaseAudioClient_e__Struct releaseAudioClient;
 
-            public partial struct _quit_e__Struct
+            internal partial struct _quit_e__Struct
             {
                 public int _unused;
             }
 
-            public unsafe partial struct _createAudioClient_e__Struct
+            internal unsafe partial struct _createAudioClient_e__Struct
             {
                 public ma_device_type deviceType;
 
@@ -43,7 +43,7 @@ namespace Naquadic.Miniaudio.Windows
                 public ma_result* pResult;
             }
 
-            public unsafe partial struct _releaseAudioClient_e__Struct
+            internal unsafe partial struct _releaseAudioClient_e__Struct
             {
                 public ma_device* pDevice;
 

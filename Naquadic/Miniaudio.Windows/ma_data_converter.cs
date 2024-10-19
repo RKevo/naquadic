@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_data_converter
+    internal unsafe partial struct ma_data_converter
     {
         public ma_format formatIn;
 

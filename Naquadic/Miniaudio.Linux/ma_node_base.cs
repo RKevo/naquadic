@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_node_base
+    internal unsafe partial struct ma_node_base
     {
         public ma_node_graph* pNodeGraph;
 

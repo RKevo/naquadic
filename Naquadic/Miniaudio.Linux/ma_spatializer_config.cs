@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_spatializer_config
+    internal unsafe partial struct ma_spatializer_config
     {
         [NativeTypeName("ma_uint32")]
         public uint channelsIn;
@@ -11,9 +11,11 @@ namespace Naquadic.Miniaudio.Linux
         [NativeTypeName("ma_channel *")]
         public byte* pChannelMapIn;
 
-        public ma_attenuation_model attenuationModel;
+        [NativeTypeName("ma_attenuation_model")]
+        public Naquadic.Common.Enums.AttenuationModel attenuationModel;
 
-        public ma_positioning positioning;
+        [NativeTypeName("ma_positioning")]
+        public Naquadic.Common.Enums.Positioning positioning;
 
         public ma_handedness handedness;
 

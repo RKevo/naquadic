@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_node_graph
+    internal partial struct ma_node_graph
     {
         public ma_node_base @base;
 

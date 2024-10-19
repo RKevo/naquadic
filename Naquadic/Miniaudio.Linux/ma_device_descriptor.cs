@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_device_descriptor
+    internal unsafe partial struct ma_device_descriptor
     {
         [NativeTypeName("const ma_device_id *")]
         public ma_device_id* pDeviceID;

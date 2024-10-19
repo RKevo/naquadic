@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_sound_flags
+    internal enum ma_sound_flags
     {
         MA_SOUND_FLAG_STREAM = 0x00000001,
         MA_SOUND_FLAG_DECODE = 0x00000002,

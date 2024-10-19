@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_resource_manager
+    internal unsafe partial struct ma_resource_manager
     {
         public ma_resource_manager_config config;
 

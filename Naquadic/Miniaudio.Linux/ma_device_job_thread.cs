@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_device_job_thread
+    internal unsafe partial struct ma_device_job_thread
     {
         [NativeTypeName("ma_thread")]
         public void* thread;

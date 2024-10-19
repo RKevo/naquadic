@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_resource_manager_data_supply_type
+    internal enum ma_resource_manager_data_supply_type
     {
         ma_resource_manager_data_supply_type_unknown = 0,
         ma_resource_manager_data_supply_type_encoded,

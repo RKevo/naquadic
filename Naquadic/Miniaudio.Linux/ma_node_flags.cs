@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_node_flags
+    internal enum ma_node_flags
     {
         MA_NODE_FLAG_PASSTHROUGH = 0x00000001,
         MA_NODE_FLAG_CONTINUOUS_PROCESSING = 0x00000002,

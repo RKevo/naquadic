@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_node_graph_config
+    internal partial struct ma_node_graph_config
     {
         [NativeTypeName("ma_uint32")]
         public uint channels;

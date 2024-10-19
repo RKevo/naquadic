@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_audio_buffer_ref
+    internal unsafe partial struct ma_audio_buffer_ref
     {
         public ma_data_source_base ds;
 

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_result
+    internal enum ma_result
     {
         MA_SUCCESS = 0,
         MA_ERROR = -1,

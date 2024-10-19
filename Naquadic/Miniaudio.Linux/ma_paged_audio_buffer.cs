@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_paged_audio_buffer
+    internal unsafe partial struct ma_paged_audio_buffer
     {
         public ma_data_source_base ds;
 

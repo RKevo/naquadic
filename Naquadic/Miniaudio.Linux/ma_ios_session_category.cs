@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_ios_session_category
+    internal enum ma_ios_session_category
     {
         ma_ios_session_category_default = 0,
         ma_ios_session_category_none,

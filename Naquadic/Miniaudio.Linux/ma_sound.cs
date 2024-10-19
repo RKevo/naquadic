@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_sound
+    internal unsafe partial struct ma_sound
     {
         public ma_engine_node engineNode;
 

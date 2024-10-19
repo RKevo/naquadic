@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_default_vfs
+    internal partial struct ma_default_vfs
     {
         public ma_vfs_callbacks cb;
 

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_log_level
+    internal enum ma_log_level
     {
         MA_LOG_LEVEL_DEBUG = 4,
         MA_LOG_LEVEL_INFO = 3,

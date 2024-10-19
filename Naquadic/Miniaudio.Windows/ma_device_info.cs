@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_device_info
+    internal partial struct ma_device_info
     {
         public ma_device_id id;
 
@@ -18,7 +18,7 @@ namespace Naquadic.Miniaudio.Windows
         [NativeTypeName("struct (anonymous struct at ./miniaudio.h:7038:5)[64]")]
         public _nativeDataFormats_e__FixedBuffer nativeDataFormats;
 
-        public partial struct _Anonymous_e__Struct
+        internal partial struct _Anonymous_e__Struct
         {
             public ma_format format;
 

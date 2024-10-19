@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_resource_manager_data_supply
+    internal partial struct ma_resource_manager_data_supply
     {
         public ma_resource_manager_data_supply_type type;
 
@@ -10,7 +10,7 @@ namespace Naquadic.Miniaudio.Windows
         public _backend_e__Union backend;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _backend_e__Union
+        internal partial struct _backend_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L10336_C9")]
@@ -24,7 +24,7 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("__AnonymousRecord_miniaudio_L10350_C9")]
             public _decodedPaged_e__Struct decodedPaged;
 
-            public unsafe partial struct _encoded_e__Struct
+            internal unsafe partial struct _encoded_e__Struct
             {
                 [NativeTypeName("const void *")]
                 public void* pData;
@@ -33,7 +33,7 @@ namespace Naquadic.Miniaudio.Windows
                 public nuint sizeInBytes;
             }
 
-            public unsafe partial struct _decoded_e__Struct
+            internal unsafe partial struct _decoded_e__Struct
             {
                 [NativeTypeName("const void *")]
                 public void* pData;
@@ -53,7 +53,7 @@ namespace Naquadic.Miniaudio.Windows
                 public uint sampleRate;
             }
 
-            public partial struct _decodedPaged_e__Struct
+            internal partial struct _decodedPaged_e__Struct
             {
                 public ma_paged_audio_buffer_data data;
 

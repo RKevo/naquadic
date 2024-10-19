@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_node_vtable
+    internal unsafe partial struct ma_node_vtable
     {
         [NativeTypeName("void (*)(ma_node *, const float **, ma_uint32 *, float **, ma_uint32 *)")]
         public delegate* unmanaged[Cdecl]<void*, float**, uint*, float**, uint*, void> onProcess;

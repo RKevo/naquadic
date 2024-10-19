@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_spatializer_listener
+    internal unsafe partial struct ma_spatializer_listener
     {
         public ma_spatializer_listener_config config;
 

@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_log
+    internal unsafe partial struct ma_log
     {
         [NativeTypeName("ma_log_callback[4]")]
         public _callbacks_e__FixedBuffer callbacks;

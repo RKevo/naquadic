@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_data_source_base
+    internal unsafe partial struct ma_data_source_base
     {
         [NativeTypeName("const ma_data_source_vtable *")]
         public ma_data_source_vtable* vtable;

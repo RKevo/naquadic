@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_encoder_config
+    internal partial struct ma_encoder_config
     {
         public ma_encoding_format encodingFormat;
 

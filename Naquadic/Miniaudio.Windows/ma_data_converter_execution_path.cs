@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_data_converter_execution_path
+    internal enum ma_data_converter_execution_path
     {
         ma_data_converter_execution_path_passthrough,
         ma_data_converter_execution_path_format_only,

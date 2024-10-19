@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_device_type
+    internal enum ma_device_type
     {
         ma_device_type_playback = 1,
         ma_device_type_capture = 2,

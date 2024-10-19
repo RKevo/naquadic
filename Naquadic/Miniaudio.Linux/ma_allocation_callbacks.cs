@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_allocation_callbacks
+    internal unsafe partial struct ma_allocation_callbacks
     {
         public void* pUserData;
 

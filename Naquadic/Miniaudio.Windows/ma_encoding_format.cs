@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_encoding_format
+    internal enum ma_encoding_format
     {
         ma_encoding_format_unknown = 0,
         ma_encoding_format_wav,

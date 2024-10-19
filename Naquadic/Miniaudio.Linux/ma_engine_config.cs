@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_engine_config
+    internal unsafe partial struct ma_engine_config
     {
         public ma_resource_manager* pResourceManager;
 

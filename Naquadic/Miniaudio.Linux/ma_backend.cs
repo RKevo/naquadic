@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_backend
+    internal enum ma_backend
     {
         ma_backend_wasapi,
         ma_backend_dsound,

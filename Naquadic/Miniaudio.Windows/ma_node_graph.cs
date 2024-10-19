@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_node_graph
+    internal partial struct ma_node_graph
     {
         public ma_node_base @base;
 

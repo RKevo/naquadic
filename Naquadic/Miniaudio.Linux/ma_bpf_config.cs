@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_bpf_config
+    internal partial struct ma_bpf_config
     {
         public ma_format format;
 

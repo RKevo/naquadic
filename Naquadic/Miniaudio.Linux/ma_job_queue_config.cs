@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_job_queue_config
+    internal partial struct ma_job_queue_config
     {
         [NativeTypeName("ma_uint32")]
         public uint flags;

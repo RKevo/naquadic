@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_aaudio_usage
+    internal enum ma_aaudio_usage
     {
         ma_aaudio_usage_default = 0,
         ma_aaudio_usage_media,

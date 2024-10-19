@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_linear_resampler_config
+    internal partial struct ma_linear_resampler_config
     {
         public ma_format format;
 

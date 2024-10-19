@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_channel_converter
+    internal unsafe partial struct ma_channel_converter
     {
         public ma_format format;
 
@@ -34,7 +34,7 @@ namespace Naquadic.Miniaudio.Windows
         public uint _ownsHeap;
 
         [StructLayout(LayoutKind.Explicit)]
-        public unsafe partial struct _weights_e__Union
+        internal unsafe partial struct _weights_e__Union
         {
             [FieldOffset(0)]
             public float** f32;

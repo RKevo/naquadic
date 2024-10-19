@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_IMMNotificationClient
+    internal unsafe partial struct ma_IMMNotificationClient
     {
         public void* lpVtbl;
 

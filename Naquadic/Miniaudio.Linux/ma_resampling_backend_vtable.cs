@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_resampling_backend_vtable
+    internal unsafe partial struct ma_resampling_backend_vtable
     {
         [NativeTypeName("ma_result (*)(void *, const ma_resampler_config *, size_t *)")]
         public delegate* unmanaged[Cdecl]<void*, ma_resampler_config*, nuint*, ma_result> onGetHeapSize;

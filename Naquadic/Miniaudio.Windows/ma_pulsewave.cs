@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_pulsewave
+    internal partial struct ma_pulsewave
     {
         public ma_waveform waveform;
 

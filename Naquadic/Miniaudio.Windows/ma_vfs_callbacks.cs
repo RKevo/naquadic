@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_vfs_callbacks
+    internal unsafe partial struct ma_vfs_callbacks
     {
         [NativeTypeName("ma_result (*)(ma_vfs *, const char *, ma_uint32, ma_vfs_file *)")]
         public delegate* unmanaged[Cdecl]<void*, sbyte*, uint, void**, ma_result> onOpen;

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_file_info
+    internal partial struct ma_file_info
     {
         [NativeTypeName("ma_uint64")]
         public ulong sizeInBytes;

@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 /// Unification
 namespace Naquadic.Common.Spatial;
 
@@ -14,19 +16,22 @@ public struct Vec3f
         Z = z;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vec3f Init(float x, float y, float z)
     {
         return funcs.ma_vec3f_init_3f(x, y, z);
     }
-	
-    public static float LengthSquared(this Vec3f v)
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public readonly float LengthSquared()
     {
-        return funcs.ma_vec3f_len2(v);
+        return funcs.ma_vec3f_len2(this);
     }
 
-    public static float Length(this Vec3f v)
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public readonly float Length()
     {
-        return funcs.ma_vec3f_len(v);
+        return funcs.ma_vec3f_len(this);
     }
 
     public static Vec3f operator +(Vec3f v) => v;
@@ -44,6 +49,29 @@ public struct Vec3f
     /// <param name="b"></param>
     /// <returns></returns>
     public static float operator *(Vec3f a, Vec3f b) => funcs.ma_vec3f_dot(a, b);
+
+    /// <summary>
+    /// Distance between two vectors
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <returns></returns>
+    public static float operator /(Vec3f a, Vec3f b) => funcs.ma_vec3f_dist(a, b);
+
+    /// <summary>
+    /// Normalize vector
+    /// </summary>
+    /// <param name="v"></param>
+    /// <returns></returns>
+    public static Vec3f operator ~(Vec3f v) => funcs.ma_vec3f_normalize(v);
+
+    /// <summary>
+    /// Cross Product
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <returns></returns>
+    public static float operator %(Vec3f a, Vec3f b) => funcs.ma_vec3f_dist(a, b);
 }
 
 public record Cone(float InnerAngleInRadians, float OuterAngleInRadians, float OuterGain);

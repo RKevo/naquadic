@@ -1,0 +1,12 @@
+--remap
+ma_vec3f=Naquadic.Common.Spatial.Vec3f
+ma_pan_mode=Naquadic.Common.Enums.PanMode
+ma_attenuation_model=Naquadic.Common.Enums.AttenuationModel
+ma_positioning=Naquadic.Common.Enums.Positioning
+ma_fence=Naquadic.Common.Structs.Fence
+--exclude
+ma_vec3f
+ma_pan_mode
+ma_attenuation_model
+ma_positioning
+ma_fence

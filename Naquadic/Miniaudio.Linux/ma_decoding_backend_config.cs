@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_decoding_backend_config
+    internal partial struct ma_decoding_backend_config
     {
         public ma_format preferredFormat;
 

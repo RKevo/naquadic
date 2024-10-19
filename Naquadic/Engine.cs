@@ -1,4 +1,5 @@
 using Naquadic.Common.Spatial;
+using Naquadic.Logging;
 
 namespace Naquadic.Thin;
 
@@ -17,7 +18,7 @@ public class Engine : IDisposable
         }
         if (result != ma_result.MA_SUCCESS)
         {
-            Console.WriteLine($"Engine initialiation error: {result}");
+            Logger.ErrorDebug(ins: $"Engine initialiation error: {result}");
         }
         _ref = __unsafeRef();
     }
@@ -31,11 +32,11 @@ public class Engine : IDisposable
         }
         if (result != ma_result.MA_SUCCESS)
         {
-            Console.WriteLine($"Engine initialiation error: {result}");
+            Logger.ErrorDebug(ins: $"Engine initialiation error: {result}");
         }
     }
 
-    protected unsafe ma_engine* __unsafeRef()
+    internal unsafe ma_engine* __unsafeRef()
     {
         fixed (ma_engine* c = &_engine)
         {
@@ -47,15 +48,17 @@ public class Engine : IDisposable
     {
         ma_result result;
         result = funcs.ma_engine_start(_ref);
-        Console.WriteLine($"Engine start error: {result}");
+        Logger.ErrorDebug(ins: $"Engine start error: {result}");
     }
 
     public unsafe void Stop()
     {
         ma_result result;
         result = funcs.ma_engine_stop(_ref);
-        Console.WriteLine($"Engine stop error: {result}");
+        Logger.ErrorDebug(ins: $"Engine stop error: {result}");
     }
+
+    public unsafe void PlaySound(string filePath) { }
 
     public unsafe ulong Time
     {
@@ -167,6 +170,9 @@ public class Engine : IDisposable
                 );
         }
 
+        /// <remarks>
+        /// Should be converted to a bool.
+        /// </remarks>
         public unsafe uint IsEnabled
         {
             get => funcs.ma_engine_listener_is_enabled(parent.__unsafeRef(), Index);
@@ -201,7 +207,7 @@ public class Engine : IDisposable
 
         if (!disposing)
         {
-            Console.WriteLine("Disposed from finalizer.");
+            Logger.WarnDebug(ins: "Disposed from finalizer.");
         }
 
         fixed (ma_engine* e = &_engine)
@@ -226,7 +232,7 @@ public class EngineConfig
         _conf = funcs.ma_engine_config_init();
     }
 
-    public unsafe ma_engine_config* __unsafeRef()
+    internal unsafe ma_engine_config* __unsafeRef()
     {
         fixed (ma_engine_config* c = &_conf)
         {

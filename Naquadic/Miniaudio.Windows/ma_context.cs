@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_context
+    internal unsafe partial struct ma_context
     {
         public ma_backend_callbacks callbacks;
 
@@ -47,7 +47,7 @@ namespace Naquadic.Miniaudio.Windows
         public _Anonymous2_e__Union Anonymous2;
 
         [UnscopedRef]
-        public ref _Anonymous1_e__Union._wasapi_e__Struct wasapi
+        internal ref _Anonymous1_e__Union._wasapi_e__Struct wasapi
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -57,7 +57,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [UnscopedRef]
-        public ref _Anonymous1_e__Union._dsound_e__Struct dsound
+        internal ref _Anonymous1_e__Union._dsound_e__Struct dsound
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -67,7 +67,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [UnscopedRef]
-        public ref _Anonymous1_e__Union._winmm_e__Struct winmm
+        internal ref _Anonymous1_e__Union._winmm_e__Struct winmm
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -77,7 +77,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [UnscopedRef]
-        public ref _Anonymous1_e__Union._jack_e__Struct jack
+        internal ref _Anonymous1_e__Union._jack_e__Struct jack
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -87,7 +87,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [UnscopedRef]
-        public ref _Anonymous1_e__Union._null_backend_e__Struct null_backend
+        internal ref _Anonymous1_e__Union._null_backend_e__Struct null_backend
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -97,7 +97,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [UnscopedRef]
-        public ref _Anonymous2_e__Union._win32_e__Struct win32
+        internal ref _Anonymous2_e__Union._win32_e__Struct win32
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -107,7 +107,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [UnscopedRef]
-        public ref int _unused
+        internal ref int _unused
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
@@ -117,7 +117,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _Anonymous1_e__Union
+        internal partial struct _Anonymous1_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L7331_C9")]
@@ -139,7 +139,7 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("__AnonymousRecord_miniaudio_L7675_C9")]
             public _null_backend_e__Struct null_backend;
 
-            public unsafe partial struct _wasapi_e__Struct
+            internal unsafe partial struct _wasapi_e__Struct
             {
                 [NativeTypeName("ma_thread")]
                 public void* commandThread;
@@ -181,7 +181,7 @@ namespace Naquadic.Miniaudio.Windows
                 }
             }
 
-            public unsafe partial struct _dsound_e__Struct
+            internal unsafe partial struct _dsound_e__Struct
             {
                 [NativeTypeName("ma_handle")]
                 public void* hDSoundDLL;
@@ -199,7 +199,7 @@ namespace Naquadic.Miniaudio.Windows
                 public void* DirectSoundCaptureEnumerateA;
             }
 
-            public unsafe partial struct _winmm_e__Struct
+            internal unsafe partial struct _winmm_e__Struct
             {
                 [NativeTypeName("ma_handle")]
                 public void* hWinMM;
@@ -256,7 +256,7 @@ namespace Naquadic.Miniaudio.Windows
                 public void* waveInReset;
             }
 
-            public unsafe partial struct _jack_e__Struct
+            internal unsafe partial struct _jack_e__Struct
             {
                 [NativeTypeName("ma_handle")]
                 public void* jackSO;
@@ -316,14 +316,14 @@ namespace Naquadic.Miniaudio.Windows
                 public uint tryStartServer;
             }
 
-            public partial struct _null_backend_e__Struct
+            internal partial struct _null_backend_e__Struct
             {
                 public int _unused;
             }
         }
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _Anonymous2_e__Union
+        internal partial struct _Anonymous2_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L7685_C9")]
@@ -332,7 +332,7 @@ namespace Naquadic.Miniaudio.Windows
             [FieldOffset(0)]
             public int _unused;
 
-            public unsafe partial struct _win32_e__Struct
+            internal unsafe partial struct _win32_e__Struct
             {
                 [NativeTypeName("ma_handle")]
                 public void* hOle32DLL;

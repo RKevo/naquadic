@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_attenuation_model
+    internal enum ma_attenuation_model
     {
         ma_attenuation_model_none,
         ma_attenuation_model_inverse,

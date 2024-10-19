@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_sound_config
+    internal unsafe partial struct ma_sound_config
     {
         [NativeTypeName("const char *")]
         public sbyte* pFilePath;

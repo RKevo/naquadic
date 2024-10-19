@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_aaudio_content_type
+    internal enum ma_aaudio_content_type
     {
         ma_aaudio_content_type_default = 0,
         ma_aaudio_content_type_speech,

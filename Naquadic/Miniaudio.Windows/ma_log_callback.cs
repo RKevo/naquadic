@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_log_callback
+    internal unsafe partial struct ma_log_callback
     {
         [NativeTypeName("ma_log_callback_proc")]
         public delegate* unmanaged[Cdecl]<void*, uint, sbyte*, void> onLog;

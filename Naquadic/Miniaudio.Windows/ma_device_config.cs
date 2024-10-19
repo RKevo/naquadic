@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_device_config
+    internal unsafe partial struct ma_device_config
     {
         public ma_device_type deviceType;
 
@@ -67,7 +67,7 @@ namespace Naquadic.Miniaudio.Windows
         [NativeTypeName("__AnonymousRecord_miniaudio_L7117_C5")]
         public _aaudio_e__Struct aaudio;
 
-        public unsafe partial struct _playback_e__Struct
+        internal unsafe partial struct _playback_e__Struct
         {
             [NativeTypeName("const ma_device_id *")]
             public ma_device_id* pDeviceID;
@@ -88,7 +88,7 @@ namespace Naquadic.Miniaudio.Windows
             public ma_share_mode shareMode;
         }
 
-        public unsafe partial struct _capture_e__Struct
+        internal unsafe partial struct _capture_e__Struct
         {
             [NativeTypeName("const ma_device_id *")]
             public ma_device_id* pDeviceID;
@@ -109,7 +109,7 @@ namespace Naquadic.Miniaudio.Windows
             public ma_share_mode shareMode;
         }
 
-        public partial struct _wasapi_e__Struct
+        internal partial struct _wasapi_e__Struct
         {
             public ma_wasapi_usage usage;
 
@@ -132,7 +132,7 @@ namespace Naquadic.Miniaudio.Windows
             public byte loopbackProcessExclude;
         }
 
-        public partial struct _alsa_e__Struct
+        internal partial struct _alsa_e__Struct
         {
             [NativeTypeName("ma_bool32")]
             public uint noMMap;
@@ -147,7 +147,7 @@ namespace Naquadic.Miniaudio.Windows
             public uint noAutoResample;
         }
 
-        public unsafe partial struct _pulse_e__Struct
+        internal unsafe partial struct _pulse_e__Struct
         {
             [NativeTypeName("const char *")]
             public sbyte* pStreamNamePlayback;
@@ -156,13 +156,13 @@ namespace Naquadic.Miniaudio.Windows
             public sbyte* pStreamNameCapture;
         }
 
-        public partial struct _coreaudio_e__Struct
+        internal partial struct _coreaudio_e__Struct
         {
             [NativeTypeName("ma_bool32")]
             public uint allowNominalSampleRateChange;
         }
 
-        public partial struct _opensl_e__Struct
+        internal partial struct _opensl_e__Struct
         {
             public ma_opensl_stream_type streamType;
 
@@ -172,7 +172,7 @@ namespace Naquadic.Miniaudio.Windows
             public uint enableCompatibilityWorkarounds;
         }
 
-        public partial struct _aaudio_e__Struct
+        internal partial struct _aaudio_e__Struct
         {
             public ma_aaudio_usage usage;
 

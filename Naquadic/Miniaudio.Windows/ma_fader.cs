@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_fader
+    internal partial struct ma_fader
     {
         public ma_fader_config config;
 

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_standard_sample_rate
+    internal enum ma_standard_sample_rate
     {
         ma_standard_sample_rate_48000 = 48000,
         ma_standard_sample_rate_44100 = 44100,

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_spatializer_listener_config
+    internal unsafe partial struct ma_spatializer_listener_config
     {
         [NativeTypeName("ma_uint32")]
         public uint channelsOut;

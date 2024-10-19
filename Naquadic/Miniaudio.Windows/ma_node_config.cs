@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_node_config
+    internal unsafe partial struct ma_node_config
     {
         [NativeTypeName("const ma_node_vtable *")]
         public ma_node_vtable* vtable;

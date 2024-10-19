@@ -3,7 +3,7 @@ using static Naquadic.Miniaudio.Windows.ma_format;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public static unsafe partial class Methods
+    internal static unsafe partial class Methods
     {
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_version([NativeTypeName("ma_uint32 *")] uint* pMajor, [NativeTypeName("ma_uint32 *")] uint* pMinor, [NativeTypeName("ma_uint32 *")] uint* pRevision);
@@ -445,10 +445,11 @@ namespace Naquadic.Miniaudio.Windows
         public static extern ma_result ma_panner_process_pcm_frames(ma_panner* pPanner, void* pFramesOut, [NativeTypeName("const void *")] void* pFramesIn, [NativeTypeName("ma_uint64")] ulong frameCount);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_panner_set_mode(ma_panner* pPanner, ma_pan_mode mode);
+        public static extern void ma_panner_set_mode(ma_panner* pPanner, [NativeTypeName("ma_pan_mode")] Naquadic.Common.Enums.PanMode mode);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_pan_mode ma_panner_get_mode([NativeTypeName("const ma_panner *")] ma_panner* pPanner);
+        [return: NativeTypeName("ma_pan_mode")]
+        public static extern Naquadic.Common.Enums.PanMode ma_panner_get_mode([NativeTypeName("const ma_panner *")] ma_panner* pPanner);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_panner_set_pan(ma_panner* pPanner, float pan);
@@ -608,16 +609,18 @@ namespace Naquadic.Miniaudio.Windows
         public static extern uint ma_spatializer_get_output_channels([NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_spatializer_set_attenuation_model(ma_spatializer* pSpatializer, ma_attenuation_model attenuationModel);
+        public static extern void ma_spatializer_set_attenuation_model(ma_spatializer* pSpatializer, [NativeTypeName("ma_attenuation_model")] Naquadic.Common.Enums.AttenuationModel attenuationModel);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_attenuation_model ma_spatializer_get_attenuation_model([NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer);
+        [return: NativeTypeName("ma_attenuation_model")]
+        public static extern Naquadic.Common.Enums.AttenuationModel ma_spatializer_get_attenuation_model([NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_spatializer_set_positioning(ma_spatializer* pSpatializer, ma_positioning positioning);
+        public static extern void ma_spatializer_set_positioning(ma_spatializer* pSpatializer, [NativeTypeName("ma_positioning")] Naquadic.Common.Enums.Positioning positioning);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_positioning ma_spatializer_get_positioning([NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer);
+        [return: NativeTypeName("ma_positioning")]
+        public static extern Naquadic.Common.Enums.Positioning ma_spatializer_get_positioning([NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_spatializer_set_rolloff(ma_spatializer* pSpatializer, float rolloff);
@@ -2573,10 +2576,11 @@ namespace Naquadic.Miniaudio.Windows
         public static extern float ma_sound_get_pan([NativeTypeName("const ma_sound *")] ma_sound* pSound);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_sound_set_pan_mode(ma_sound* pSound, ma_pan_mode panMode);
+        public static extern void ma_sound_set_pan_mode(ma_sound* pSound, [NativeTypeName("ma_pan_mode")] Naquadic.Common.Enums.PanMode panMode);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_pan_mode ma_sound_get_pan_mode([NativeTypeName("const ma_sound *")] ma_sound* pSound);
+        [return: NativeTypeName("ma_pan_mode")]
+        public static extern Naquadic.Common.Enums.PanMode ma_sound_get_pan_mode([NativeTypeName("const ma_sound *")] ma_sound* pSound);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_sound_set_pitch(ma_sound* pSound, float pitch);
@@ -2628,16 +2632,18 @@ namespace Naquadic.Miniaudio.Windows
         public static extern Naquadic.Common.Spatial.Vec3f ma_sound_get_velocity([NativeTypeName("const ma_sound *")] ma_sound* pSound);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_sound_set_attenuation_model(ma_sound* pSound, ma_attenuation_model attenuationModel);
+        public static extern void ma_sound_set_attenuation_model(ma_sound* pSound, [NativeTypeName("ma_attenuation_model")] Naquadic.Common.Enums.AttenuationModel attenuationModel);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_attenuation_model ma_sound_get_attenuation_model([NativeTypeName("const ma_sound *")] ma_sound* pSound);
+        [return: NativeTypeName("ma_attenuation_model")]
+        public static extern Naquadic.Common.Enums.AttenuationModel ma_sound_get_attenuation_model([NativeTypeName("const ma_sound *")] ma_sound* pSound);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_sound_set_positioning(ma_sound* pSound, ma_positioning positioning);
+        public static extern void ma_sound_set_positioning(ma_sound* pSound, [NativeTypeName("ma_positioning")] Naquadic.Common.Enums.Positioning positioning);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_positioning ma_sound_get_positioning([NativeTypeName("const ma_sound *")] ma_sound* pSound);
+        [return: NativeTypeName("ma_positioning")]
+        public static extern Naquadic.Common.Enums.Positioning ma_sound_get_positioning([NativeTypeName("const ma_sound *")] ma_sound* pSound);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_sound_set_rolloff(ma_sound* pSound, float rolloff);
@@ -2795,10 +2801,11 @@ namespace Naquadic.Miniaudio.Windows
         public static extern float ma_sound_group_get_pan([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_sound_group_set_pan_mode([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, ma_pan_mode panMode);
+        public static extern void ma_sound_group_set_pan_mode([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, [NativeTypeName("ma_pan_mode")] Naquadic.Common.Enums.PanMode panMode);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_pan_mode ma_sound_group_get_pan_mode([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
+        [return: NativeTypeName("ma_pan_mode")]
+        public static extern Naquadic.Common.Enums.PanMode ma_sound_group_get_pan_mode([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_sound_group_set_pitch([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, float pitch);
@@ -2850,16 +2857,18 @@ namespace Naquadic.Miniaudio.Windows
         public static extern Naquadic.Common.Spatial.Vec3f ma_sound_group_get_velocity([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_sound_group_set_attenuation_model([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, ma_attenuation_model attenuationModel);
+        public static extern void ma_sound_group_set_attenuation_model([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, [NativeTypeName("ma_attenuation_model")] Naquadic.Common.Enums.AttenuationModel attenuationModel);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_attenuation_model ma_sound_group_get_attenuation_model([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
+        [return: NativeTypeName("ma_attenuation_model")]
+        public static extern Naquadic.Common.Enums.AttenuationModel ma_sound_group_get_attenuation_model([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_sound_group_set_positioning([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, ma_positioning positioning);
+        public static extern void ma_sound_group_set_positioning([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, [NativeTypeName("ma_positioning")] Naquadic.Common.Enums.Positioning positioning);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_positioning ma_sound_group_get_positioning([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
+        [return: NativeTypeName("ma_positioning")]
+        public static extern Naquadic.Common.Enums.Positioning ma_sound_group_get_positioning([NativeTypeName("const ma_sound_group *")] ma_sound* pGroup);
 
         [DllImport("miniaudio.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_sound_group_set_rolloff([NativeTypeName("ma_sound_group *")] ma_sound* pGroup, float rolloff);

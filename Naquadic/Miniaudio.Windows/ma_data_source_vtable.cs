@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_data_source_vtable
+    internal unsafe partial struct ma_data_source_vtable
     {
         [NativeTypeName("ma_result (*)(ma_data_source *, void *, ma_uint64, ma_uint64 *)")]
         public delegate* unmanaged[Cdecl]<void*, void*, ulong, ulong*, ma_result> onRead;

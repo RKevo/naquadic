@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_share_mode
+    internal enum ma_share_mode
     {
         ma_share_mode_shared = 0,
         ma_share_mode_exclusive,

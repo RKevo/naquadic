@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_resampler
+    internal unsafe partial struct ma_resampler
     {
         [NativeTypeName("ma_resampling_backend *")]
         public void* pBackend;
@@ -31,7 +31,7 @@ namespace Naquadic.Miniaudio.Windows
         public uint _ownsHeap;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _state_e__Union
+        internal partial struct _state_e__Union
         {
             [FieldOffset(0)]
             public ma_linear_resampler linear;

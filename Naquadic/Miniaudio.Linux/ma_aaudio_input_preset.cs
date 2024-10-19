@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_aaudio_input_preset
+    internal enum ma_aaudio_input_preset
     {
         ma_aaudio_input_preset_default = 0,
         ma_aaudio_input_preset_generic,

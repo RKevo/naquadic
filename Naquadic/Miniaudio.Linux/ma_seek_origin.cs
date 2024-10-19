@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public enum ma_seek_origin
+    internal enum ma_seek_origin
     {
         ma_seek_origin_start,
         ma_seek_origin_current,

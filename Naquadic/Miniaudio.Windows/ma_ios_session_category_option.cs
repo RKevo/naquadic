@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_ios_session_category_option
+    internal enum ma_ios_session_category_option
     {
         ma_ios_session_category_option_mix_with_others = 0x01,
         ma_ios_session_category_option_duck_others = 0x02,

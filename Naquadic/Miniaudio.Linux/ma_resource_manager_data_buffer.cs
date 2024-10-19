@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_resource_manager_data_buffer
+    internal unsafe partial struct ma_resource_manager_data_buffer
     {
         public ma_data_source_base ds;
 
@@ -36,7 +36,7 @@ namespace Naquadic.Miniaudio.Linux
         public _connector_e__Union connector;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _connector_e__Union
+        internal partial struct _connector_e__Union
         {
             [FieldOffset(0)]
             public ma_decoder decoder;

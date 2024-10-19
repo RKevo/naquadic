@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_node_input_bus
+    internal partial struct ma_node_input_bus
     {
         public ma_node_output_bus head;
 

@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Linux
 {
-    public unsafe partial struct ma_decoder
+    internal unsafe partial struct ma_decoder
     {
         public ma_data_source_base ds;
 
@@ -55,7 +55,7 @@ namespace Naquadic.Miniaudio.Linux
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _data_e__Union
+        internal partial struct _data_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L9948_C9")]
@@ -65,7 +65,7 @@ namespace Naquadic.Miniaudio.Linux
             [NativeTypeName("__AnonymousRecord_miniaudio_L9953_C9")]
             public _memory_e__Struct memory;
 
-            public unsafe partial struct _vfs_e__Struct
+            internal unsafe partial struct _vfs_e__Struct
             {
                 [NativeTypeName("ma_vfs *")]
                 public void* pVFS;
@@ -74,7 +74,7 @@ namespace Naquadic.Miniaudio.Linux
                 public void* file;
             }
 
-            public unsafe partial struct _memory_e__Struct
+            internal unsafe partial struct _memory_e__Struct
             {
                 [NativeTypeName("const ma_uint8 *")]
                 public byte* pData;

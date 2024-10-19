@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_device_notification
+    internal unsafe partial struct ma_device_notification
     {
         public ma_device* pDevice;
 
@@ -12,7 +12,7 @@ namespace Naquadic.Miniaudio.Windows
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _data_e__Union
+        internal partial struct _data_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L6739_C9")]
@@ -30,22 +30,22 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("__AnonymousRecord_miniaudio_L6751_C9")]
             public _interruption_e__Struct interruption;
 
-            public partial struct _started_e__Struct
+            internal partial struct _started_e__Struct
             {
                 public int _unused;
             }
 
-            public partial struct _stopped_e__Struct
+            internal partial struct _stopped_e__Struct
             {
                 public int _unused;
             }
 
-            public partial struct _rerouted_e__Struct
+            internal partial struct _rerouted_e__Struct
             {
                 public int _unused;
             }
 
-            public partial struct _interruption_e__Struct
+            internal partial struct _interruption_e__Struct
             {
                 public int _unused;
             }

@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_resource_manager_pipeline_notifications
+    internal partial struct ma_resource_manager_pipeline_notifications
     {
         public ma_resource_manager_pipeline_stage_notification init;
 

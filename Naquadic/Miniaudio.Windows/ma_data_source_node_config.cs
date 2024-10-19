@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_data_source_node_config
+    internal unsafe partial struct ma_data_source_node_config
     {
         public ma_node_config nodeConfig;
 

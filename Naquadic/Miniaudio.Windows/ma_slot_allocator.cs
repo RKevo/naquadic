@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_slot_allocator
+    internal unsafe partial struct ma_slot_allocator
     {
         public ma_slot_allocator_group* pGroups;
 

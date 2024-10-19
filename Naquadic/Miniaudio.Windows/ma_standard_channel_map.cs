@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_standard_channel_map
+    internal enum ma_standard_channel_map
     {
         ma_standard_channel_map_microsoft,
         ma_standard_channel_map_alsa,

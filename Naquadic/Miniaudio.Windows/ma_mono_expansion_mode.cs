@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_mono_expansion_mode
+    internal enum ma_mono_expansion_mode
     {
         ma_mono_expansion_mode_duplicate = 0,
         ma_mono_expansion_mode_average,

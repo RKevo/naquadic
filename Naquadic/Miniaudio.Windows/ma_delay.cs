@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_delay
+    internal unsafe partial struct ma_delay
     {
         public ma_delay_config config;
 

@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_job
+    internal partial struct ma_job
     {
         [NativeTypeName("__AnonymousRecord_miniaudio_L6367_C5")]
         public _toc_e__Union toc;
@@ -17,7 +17,7 @@ namespace Naquadic.Miniaudio.Windows
         public _data_e__Union data;
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _toc_e__Union
+        internal partial struct _toc_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L6369_C9")]
@@ -27,7 +27,7 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("ma_uint64")]
             public ulong allocation;
 
-            public partial struct _breakup_e__Struct
+            internal partial struct _breakup_e__Struct
             {
                 [NativeTypeName("ma_uint16")]
                 public ushort code;
@@ -41,7 +41,7 @@ namespace Naquadic.Miniaudio.Windows
         }
 
         [StructLayout(LayoutKind.Explicit)]
-        public partial struct _data_e__Union
+        internal partial struct _data_e__Union
         {
             [FieldOffset(0)]
             [NativeTypeName("__AnonymousRecord_miniaudio_L6383_C9")]
@@ -55,7 +55,7 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("__AnonymousRecord_miniaudio_L6469_C9")]
             public _device_e__Union device;
 
-            public unsafe partial struct _custom_e__Struct
+            internal unsafe partial struct _custom_e__Struct
             {
                 [NativeTypeName("ma_job_proc")]
                 public delegate* unmanaged[Cdecl]<ma_job*, ma_result> proc;
@@ -68,7 +68,7 @@ namespace Naquadic.Miniaudio.Windows
             }
 
             [StructLayout(LayoutKind.Explicit)]
-            public partial struct _resourceManager_e__Union
+            internal partial struct _resourceManager_e__Union
             {
                 [FieldOffset(0)]
                 [NativeTypeName("__AnonymousRecord_miniaudio_L6393_C13")]
@@ -106,7 +106,7 @@ namespace Naquadic.Miniaudio.Windows
                 [NativeTypeName("__AnonymousRecord_miniaudio_L6461_C13")]
                 public _seekDataStream_e__Struct seekDataStream;
 
-                public unsafe partial struct _loadDataBufferNode_e__Struct
+                internal unsafe partial struct _loadDataBufferNode_e__Struct
                 {
                     public void* pResourceManager;
 
@@ -132,7 +132,7 @@ namespace Naquadic.Miniaudio.Windows
                     public ma_fence* pDoneFence;
                 }
 
-                public unsafe partial struct _freeDataBufferNode_e__Struct
+                internal unsafe partial struct _freeDataBufferNode_e__Struct
                 {
                     public void* pResourceManager;
 
@@ -144,7 +144,7 @@ namespace Naquadic.Miniaudio.Windows
                     public ma_fence* pDoneFence;
                 }
 
-                public unsafe partial struct _pageDataBufferNode_e__Struct
+                internal unsafe partial struct _pageDataBufferNode_e__Struct
                 {
                     public void* pResourceManager;
 
@@ -158,7 +158,7 @@ namespace Naquadic.Miniaudio.Windows
                     public ma_fence* pDoneFence;
                 }
 
-                public unsafe partial struct _loadDataBuffer_e__Struct
+                internal unsafe partial struct _loadDataBuffer_e__Struct
                 {
                     public void* pDataBuffer;
 
@@ -188,7 +188,7 @@ namespace Naquadic.Miniaudio.Windows
                     public uint isLooping;
                 }
 
-                public unsafe partial struct _freeDataBuffer_e__Struct
+                internal unsafe partial struct _freeDataBuffer_e__Struct
                 {
                     public void* pDataBuffer;
 
@@ -198,7 +198,7 @@ namespace Naquadic.Miniaudio.Windows
                     public ma_fence* pDoneFence;
                 }
 
-                public unsafe partial struct _loadDataStream_e__Struct
+                internal unsafe partial struct _loadDataStream_e__Struct
                 {
                     public void* pDataStream;
 
@@ -217,7 +217,7 @@ namespace Naquadic.Miniaudio.Windows
                     public ma_fence* pInitFence;
                 }
 
-                public unsafe partial struct _freeDataStream_e__Struct
+                internal unsafe partial struct _freeDataStream_e__Struct
                 {
                     public void* pDataStream;
 
@@ -227,7 +227,7 @@ namespace Naquadic.Miniaudio.Windows
                     public ma_fence* pDoneFence;
                 }
 
-                public unsafe partial struct _pageDataStream_e__Struct
+                internal unsafe partial struct _pageDataStream_e__Struct
                 {
                     public void* pDataStream;
 
@@ -235,7 +235,7 @@ namespace Naquadic.Miniaudio.Windows
                     public uint pageIndex;
                 }
 
-                public unsafe partial struct _seekDataStream_e__Struct
+                internal unsafe partial struct _seekDataStream_e__Struct
                 {
                     public void* pDataStream;
 
@@ -245,20 +245,20 @@ namespace Naquadic.Miniaudio.Windows
             }
 
             [StructLayout(LayoutKind.Explicit)]
-            public partial struct _device_e__Union
+            internal partial struct _device_e__Union
             {
                 [FieldOffset(0)]
                 [NativeTypeName("__AnonymousRecord_miniaudio_L6471_C13")]
                 public _aaudio_e__Union aaudio;
 
                 [StructLayout(LayoutKind.Explicit)]
-                public partial struct _aaudio_e__Union
+                internal partial struct _aaudio_e__Union
                 {
                     [FieldOffset(0)]
                     [NativeTypeName("__AnonymousRecord_miniaudio_L6473_C17")]
                     public _reroute_e__Struct reroute;
 
-                    public unsafe partial struct _reroute_e__Struct
+                    internal unsafe partial struct _reroute_e__Struct
                     {
                         public void* pDevice;
 

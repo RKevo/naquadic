@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public partial struct ma_device_job_thread_config
+    internal partial struct ma_device_job_thread_config
     {
         [NativeTypeName("ma_bool32")]
         public uint noThread;

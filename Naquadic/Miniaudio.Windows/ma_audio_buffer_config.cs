@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public unsafe partial struct ma_audio_buffer_config
+    internal unsafe partial struct ma_audio_buffer_config
     {
         public ma_format format;
 

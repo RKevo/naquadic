@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Windows
 {
-    public enum ma_channel_conversion_path
+    internal enum ma_channel_conversion_path
     {
         ma_channel_conversion_path_unknown,
         ma_channel_conversion_path_passthrough,

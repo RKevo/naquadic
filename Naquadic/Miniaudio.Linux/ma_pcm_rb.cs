@@ -1,6 +1,6 @@
 namespace Naquadic.Miniaudio.Linux
 {
-    public partial struct ma_pcm_rb
+    internal partial struct ma_pcm_rb
     {
         public ma_data_source_base ds;
 

@@ -71,7 +71,7 @@ public class ResourceManagerConfig
         _conf = funcs.ma_resource_manager_config_init();
     }
 
-    public unsafe ma_resource_manager_config* __unsafeRef()
+    internal unsafe ma_resource_manager_config* __unsafeRef()
     {
         fixed (ma_resource_manager_config* c = &_conf)
         {

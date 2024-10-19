@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 namespace Naquadic.Miniaudio.Windows
 {
     [StructLayout(LayoutKind.Explicit)]
-    public partial struct ma_device_id
+    internal partial struct ma_device_id
     {
         [FieldOffset(0)]
         [NativeTypeName("ma_wchar_win32[64]")]
@@ -65,7 +65,7 @@ namespace Naquadic.Miniaudio.Windows
         public int nullbackend;
 
         [StructLayout(LayoutKind.Explicit)]
-        public unsafe partial struct _custom_e__Union
+        internal unsafe partial struct _custom_e__Union
         {
             [FieldOffset(0)]
             public int i;
