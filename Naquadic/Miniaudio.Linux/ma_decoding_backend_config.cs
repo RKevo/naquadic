@@ -2,7 +2,8 @@ namespace Naquadic.Miniaudio.Linux
 {
     internal partial struct ma_decoding_backend_config
     {
-        public ma_format preferredFormat;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format preferredFormat;
 
         [NativeTypeName("ma_uint32")]
         public uint seekPointCount;

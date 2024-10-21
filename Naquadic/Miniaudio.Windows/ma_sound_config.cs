@@ -56,6 +56,7 @@ namespace Naquadic.Miniaudio.Windows
 
         public ma_resource_manager_pipeline_notifications initNotifications;
 
-        public ma_fence* pDoneFence;
+        [NativeTypeName("ma_fence *")]
+        public Naquadic.Common.Structs.Fence* pDoneFence;
     }
 }

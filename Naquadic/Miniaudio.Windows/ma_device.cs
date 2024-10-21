@@ -153,7 +153,8 @@ namespace Naquadic.Miniaudio.Windows
 
             public ma_share_mode shareMode;
 
-            public ma_format format;
+            [NativeTypeName("ma_format")]
+            public Naquadic.Common.Enums.Format format;
 
             [NativeTypeName("ma_uint32")]
             public uint channels;
@@ -161,7 +162,8 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("ma_channel[254]")]
             public _channelMap_e__FixedBuffer channelMap;
 
-            public ma_format internalFormat;
+            [NativeTypeName("ma_format")]
+            public Naquadic.Common.Enums.Format internalFormat;
 
             [NativeTypeName("ma_uint32")]
             public uint internalChannels;
@@ -234,7 +236,8 @@ namespace Naquadic.Miniaudio.Windows
 
             public ma_share_mode shareMode;
 
-            public ma_format format;
+            [NativeTypeName("ma_format")]
+            public Naquadic.Common.Enums.Format format;
 
             [NativeTypeName("ma_uint32")]
             public uint channels;
@@ -242,7 +245,8 @@ namespace Naquadic.Miniaudio.Windows
             [NativeTypeName("ma_channel[254]")]
             public _channelMap_e__FixedBuffer channelMap;
 
-            public ma_format internalFormat;
+            [NativeTypeName("ma_format")]
+            public Naquadic.Common.Enums.Format internalFormat;
 
             [NativeTypeName("ma_uint32")]
             public uint internalChannels;

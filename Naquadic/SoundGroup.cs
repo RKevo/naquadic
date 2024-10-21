@@ -207,7 +207,7 @@ public class SoundGroup : IDisposable, ISoundNode
 
     public unsafe uint IsPlaying => funcs.ma_sound_group_is_playing(_ref);
 
-    public unsafe ulong TimePCM => funcs.ma_sound_group_get_time_in_pcm_frames(_ref);
+    public unsafe ulong Time => funcs.ma_sound_group_get_time_in_pcm_frames(_ref);
 
     public unsafe void SetFadePCM(float volumeStart, float volumeEnd, ulong fadeLength)
     {

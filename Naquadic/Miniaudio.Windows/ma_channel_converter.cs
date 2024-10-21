@@ -4,7 +4,8 @@ namespace Naquadic.Miniaudio.Windows
 {
     internal unsafe partial struct ma_channel_converter
     {
-        public ma_format format;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format format;
 
         [NativeTypeName("ma_uint32")]
         public uint channelsIn;

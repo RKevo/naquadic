@@ -9,7 +9,7 @@ namespace Naquadic.Miniaudio.Windows
         public delegate* unmanaged[Cdecl]<void*, ulong, ma_result> onSeek;
 
         [NativeTypeName("ma_result (*)(ma_data_source *, ma_format *, ma_uint32 *, ma_uint32 *, ma_channel *, size_t)")]
-        public delegate* unmanaged[Cdecl]<void*, ma_format*, uint*, uint*, byte*, nuint, ma_result> onGetDataFormat;
+        public delegate* unmanaged[Cdecl]<void*, Naquadic.Common.Enums.Format*, uint*, uint*, byte*, nuint, ma_result> onGetDataFormat;
 
         [NativeTypeName("ma_result (*)(ma_data_source *, ma_uint64 *)")]
         public delegate* unmanaged[Cdecl]<void*, ulong*, ma_result> onGetCursor;

@@ -4,7 +4,8 @@ namespace Naquadic.Miniaudio.Windows
     {
         public ma_encoding_format encodingFormat;
 
-        public ma_format format;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format format;
 
         [NativeTypeName("ma_uint32")]
         public uint channels;

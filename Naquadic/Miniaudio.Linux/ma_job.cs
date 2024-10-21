@@ -127,9 +127,11 @@ namespace Naquadic.Miniaudio.Linux
                     [NativeTypeName("ma_async_notification *")]
                     public void* pDoneNotification;
 
-                    public ma_fence* pInitFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pInitFence;
 
-                    public ma_fence* pDoneFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pDoneFence;
                 }
 
                 internal unsafe partial struct _freeDataBufferNode_e__Struct
@@ -141,7 +143,8 @@ namespace Naquadic.Miniaudio.Linux
                     [NativeTypeName("ma_async_notification *")]
                     public void* pDoneNotification;
 
-                    public ma_fence* pDoneFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pDoneFence;
                 }
 
                 internal unsafe partial struct _pageDataBufferNode_e__Struct
@@ -155,7 +158,8 @@ namespace Naquadic.Miniaudio.Linux
                     [NativeTypeName("ma_async_notification *")]
                     public void* pDoneNotification;
 
-                    public ma_fence* pDoneFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pDoneFence;
                 }
 
                 internal unsafe partial struct _loadDataBuffer_e__Struct
@@ -168,9 +172,11 @@ namespace Naquadic.Miniaudio.Linux
                     [NativeTypeName("ma_async_notification *")]
                     public void* pDoneNotification;
 
-                    public ma_fence* pInitFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pInitFence;
 
-                    public ma_fence* pDoneFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pDoneFence;
 
                     [NativeTypeName("ma_uint64")]
                     public ulong rangeBegInPCMFrames;
@@ -195,7 +201,8 @@ namespace Naquadic.Miniaudio.Linux
                     [NativeTypeName("ma_async_notification *")]
                     public void* pDoneNotification;
 
-                    public ma_fence* pDoneFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pDoneFence;
                 }
 
                 internal unsafe partial struct _loadDataStream_e__Struct
@@ -214,7 +221,8 @@ namespace Naquadic.Miniaudio.Linux
                     [NativeTypeName("ma_async_notification *")]
                     public void* pInitNotification;
 
-                    public ma_fence* pInitFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pInitFence;
                 }
 
                 internal unsafe partial struct _freeDataStream_e__Struct
@@ -224,7 +232,8 @@ namespace Naquadic.Miniaudio.Linux
                     [NativeTypeName("ma_async_notification *")]
                     public void* pDoneNotification;
 
-                    public ma_fence* pDoneFence;
+                    [NativeTypeName("ma_fence *")]
+                    public Naquadic.Common.Structs.Fence* pDoneFence;
                 }
 
                 internal unsafe partial struct _pageDataStream_e__Struct

@@ -72,7 +72,8 @@ namespace Naquadic.Miniaudio.Linux
             [NativeTypeName("const ma_device_id *")]
             public ma_device_id* pDeviceID;
 
-            public ma_format format;
+            [NativeTypeName("ma_format")]
+            public Naquadic.Common.Enums.Format format;
 
             [NativeTypeName("ma_uint32")]
             public uint channels;
@@ -93,7 +94,8 @@ namespace Naquadic.Miniaudio.Linux
             [NativeTypeName("const ma_device_id *")]
             public ma_device_id* pDeviceID;
 
-            public ma_format format;
+            [NativeTypeName("ma_format")]
+            public Naquadic.Common.Enums.Format format;
 
             [NativeTypeName("ma_uint32")]
             public uint channels;

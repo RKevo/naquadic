@@ -5,6 +5,7 @@ namespace Naquadic.Miniaudio.Windows
         [NativeTypeName("ma_async_notification *")]
         public void* pNotification;
 
-        public ma_fence* pFence;
+        [NativeTypeName("ma_fence *")]
+        public Naquadic.Common.Structs.Fence* pFence;
     }
 }

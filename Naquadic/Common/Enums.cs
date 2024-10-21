@@ -19,3 +19,14 @@ public enum Positioning
     Absolute,
     Relative,
 }
+
+public enum Format
+{
+    Unknown = 0,
+    U8 = 1,
+    S16 = 2,
+    S24 = 3,
+    S32 = 4,
+    F32 = 5,
+    Count,
+}

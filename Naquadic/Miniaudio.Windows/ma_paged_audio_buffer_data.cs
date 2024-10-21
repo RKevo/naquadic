@@ -2,7 +2,8 @@ namespace Naquadic.Miniaudio.Windows
 {
     internal unsafe partial struct ma_paged_audio_buffer_data
     {
-        public ma_format format;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format format;
 
         [NativeTypeName("ma_uint32")]
         public uint channels;

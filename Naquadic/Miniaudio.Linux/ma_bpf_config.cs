@@ -2,7 +2,8 @@ namespace Naquadic.Miniaudio.Linux
 {
     internal partial struct ma_bpf_config
     {
-        public ma_format format;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format format;
 
         [NativeTypeName("ma_uint32")]
         public uint channels;

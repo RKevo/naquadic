@@ -4,7 +4,8 @@ namespace Naquadic.Miniaudio.Linux
     {
         public ma_data_source_base ds;
 
-        public ma_format format;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format format;
 
         [NativeTypeName("ma_uint32")]
         public uint channels;

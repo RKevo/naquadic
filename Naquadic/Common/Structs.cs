@@ -9,3 +9,4 @@ public unsafe struct Fence
 
     public uint Counter;
 }
+

@@ -6,7 +6,8 @@ namespace Naquadic.Miniaudio.Windows
 
         public ma_log* pLog;
 
-        public ma_format decodedFormat;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format decodedFormat;
 
         [NativeTypeName("ma_uint32")]
         public uint decodedChannels;

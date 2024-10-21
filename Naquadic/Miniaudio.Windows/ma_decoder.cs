@@ -28,7 +28,8 @@ namespace Naquadic.Miniaudio.Windows
         [NativeTypeName("ma_uint64")]
         public ulong readPointerInPCMFrames;
 
-        public ma_format outputFormat;
+        [NativeTypeName("ma_format")]
+        public Naquadic.Common.Enums.Format outputFormat;
 
         [NativeTypeName("ma_uint32")]
         public uint outputChannels;

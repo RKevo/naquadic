@@ -70,5 +70,5 @@ public interface ISoundNode
     /// <param name="globalTime">Absolute global time in milliseconds.</param>
     public void ScheduleStopMsec(ulong globalTime);
     public uint IsPlaying { get; }
-    public ulong TimePCM { get; }
+    public ulong Time { get; }
 }

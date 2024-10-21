@@ -1,5 +1,4 @@
 using System.Runtime.InteropServices;
-using static Naquadic.Miniaudio.Linux.ma_format;
 
 namespace Naquadic.Miniaudio.Linux
 {
@@ -37,7 +36,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_log_postf(ma_log* pLog, [NativeTypeName("ma_uint32")] uint level, [NativeTypeName("const char *")] sbyte* pFormat, __arglist);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_biquad_config ma_biquad_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, double b0, double b1, double b2, double a0, double a1, double a2);
+        public static extern ma_biquad_config ma_biquad_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, double b0, double b1, double b2, double a0, double a1, double a2);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_biquad_get_heap_size([NativeTypeName("const ma_biquad_config *")] ma_biquad_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -65,11 +64,11 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_biquad_get_latency([NativeTypeName("const ma_biquad *")] ma_biquad* pBQ);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_lpf1_config ma_lpf1_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency);
+        public static extern ma_lpf1_config ma_lpf1_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("ma_lpf2_config")]
-        public static extern ma_lpf1_config ma_lpf2_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, double q);
+        public static extern ma_lpf1_config ma_lpf2_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, double q);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_lpf1_get_heap_size([NativeTypeName("const ma_lpf1_config *")] ma_lpf1_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -122,7 +121,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_lpf2_get_latency([NativeTypeName("const ma_lpf2 *")] ma_lpf2* pLPF);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_lpf_config ma_lpf_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, [NativeTypeName("ma_uint32")] uint order);
+        public static extern ma_lpf_config ma_lpf_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, [NativeTypeName("ma_uint32")] uint order);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_lpf_get_heap_size([NativeTypeName("const ma_lpf_config *")] ma_lpf_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -150,11 +149,11 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_lpf_get_latency([NativeTypeName("const ma_lpf *")] ma_lpf* pLPF);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_hpf1_config ma_hpf1_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency);
+        public static extern ma_hpf1_config ma_hpf1_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("ma_hpf2_config")]
-        public static extern ma_hpf1_config ma_hpf2_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, double q);
+        public static extern ma_hpf1_config ma_hpf2_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, double q);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_hpf1_get_heap_size([NativeTypeName("const ma_hpf1_config *")] ma_hpf1_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -201,7 +200,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_hpf2_get_latency([NativeTypeName("const ma_hpf2 *")] ma_hpf2* pHPF);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_hpf_config ma_hpf_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, [NativeTypeName("ma_uint32")] uint order);
+        public static extern ma_hpf_config ma_hpf_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, [NativeTypeName("ma_uint32")] uint order);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_hpf_get_heap_size([NativeTypeName("const ma_hpf_config *")] ma_hpf_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -226,7 +225,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_hpf_get_latency([NativeTypeName("const ma_hpf *")] ma_hpf* pHPF);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_bpf2_config ma_bpf2_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, double q);
+        public static extern ma_bpf2_config ma_bpf2_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, double q);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_bpf2_get_heap_size([NativeTypeName("const ma_bpf2_config *")] ma_bpf2_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -251,7 +250,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_bpf2_get_latency([NativeTypeName("const ma_bpf2 *")] ma_bpf2* pBPF);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_bpf_config ma_bpf_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, [NativeTypeName("ma_uint32")] uint order);
+        public static extern ma_bpf_config ma_bpf_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double cutoffFrequency, [NativeTypeName("ma_uint32")] uint order);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_bpf_get_heap_size([NativeTypeName("const ma_bpf_config *")] ma_bpf_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -276,7 +275,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_bpf_get_latency([NativeTypeName("const ma_bpf *")] ma_bpf* pBPF);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_notch2_config ma_notch2_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double q, double frequency);
+        public static extern ma_notch2_config ma_notch2_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double q, double frequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_notch2_get_heap_size([NativeTypeName("const ma_notch2_config *")] ma_notch2_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -301,7 +300,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_notch2_get_latency([NativeTypeName("const ma_notch2 *")] ma_notch2* pFilter);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_peak2_config ma_peak2_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double gainDB, double q, double frequency);
+        public static extern ma_peak2_config ma_peak2_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double gainDB, double q, double frequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_peak2_get_heap_size([NativeTypeName("const ma_peak2_config *")] ma_peak2_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -326,7 +325,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_peak2_get_latency([NativeTypeName("const ma_peak2 *")] ma_peak2* pFilter);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_loshelf2_config ma_loshelf2_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double gainDB, double shelfSlope, double frequency);
+        public static extern ma_loshelf2_config ma_loshelf2_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double gainDB, double shelfSlope, double frequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_loshelf2_get_heap_size([NativeTypeName("const ma_loshelf2_config *")] ma_loshelf2_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -351,7 +350,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_loshelf2_get_latency([NativeTypeName("const ma_loshelf2 *")] ma_loshelf2* pFilter);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_hishelf2_config ma_hishelf2_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double gainDB, double shelfSlope, double frequency);
+        public static extern ma_hishelf2_config ma_hishelf2_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double gainDB, double shelfSlope, double frequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_hishelf2_get_heap_size([NativeTypeName("const ma_hishelf2_config *")] ma_hishelf2_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -436,7 +435,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_gainer_get_master_volume([NativeTypeName("const ma_gainer *")] ma_gainer* pGainer, float* pVolume);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_panner_config ma_panner_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels);
+        public static extern ma_panner_config ma_panner_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_panner_init([NativeTypeName("const ma_panner_config *")] ma_panner_config* pConfig, ma_panner* pPanner);
@@ -458,7 +457,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern float ma_panner_get_pan([NativeTypeName("const ma_panner *")] ma_panner* pPanner);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_fader_config ma_fader_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
+        public static extern ma_fader_config ma_fader_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_fader_init([NativeTypeName("const ma_fader_config *")] ma_fader_config* pConfig, ma_fader* pFader);
@@ -467,7 +466,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_fader_process_pcm_frames(ma_fader* pFader, void* pFramesOut, [NativeTypeName("const void *")] void* pFramesIn, [NativeTypeName("ma_uint64")] ulong frameCount);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_fader_get_data_format([NativeTypeName("const ma_fader *")] ma_fader* pFader, ma_format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate);
+        public static extern void ma_fader_get_data_format([NativeTypeName("const ma_fader *")] ma_fader* pFader, [NativeTypeName("ma_format *")] Naquadic.Common.Enums.Format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_fader_set_fade(ma_fader* pFader, float volumeBeg, float volumeEnd, [NativeTypeName("ma_uint64")] ulong lengthInFrames);
@@ -695,7 +694,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void ma_spatializer_get_relative_position_and_direction([NativeTypeName("const ma_spatializer *")] ma_spatializer* pSpatializer, [NativeTypeName("const ma_spatializer_listener *")] ma_spatializer_listener* pListener, [NativeTypeName("ma_vec3f *")] Naquadic.Common.Spatial.Vec3f* pRelativePos, [NativeTypeName("ma_vec3f *")] Naquadic.Common.Spatial.Vec3f* pRelativeDir);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_linear_resampler_config ma_linear_resampler_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRateIn, [NativeTypeName("ma_uint32")] uint sampleRateOut);
+        public static extern ma_linear_resampler_config ma_linear_resampler_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRateIn, [NativeTypeName("ma_uint32")] uint sampleRateOut);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_linear_resampler_get_heap_size([NativeTypeName("const ma_linear_resampler_config *")] ma_linear_resampler_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -736,7 +735,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_linear_resampler_reset(ma_linear_resampler* pResampler);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_resampler_config ma_resampler_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRateIn, [NativeTypeName("ma_uint32")] uint sampleRateOut, ma_resample_algorithm algorithm);
+        public static extern ma_resampler_config ma_resampler_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRateIn, [NativeTypeName("ma_uint32")] uint sampleRateOut, ma_resample_algorithm algorithm);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_resampler_get_heap_size([NativeTypeName("const ma_resampler_config *")] ma_resampler_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -777,7 +776,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_resampler_reset(ma_resampler* pResampler);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_channel_converter_config ma_channel_converter_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channelsIn, [NativeTypeName("const ma_channel *")] byte* pChannelMapIn, [NativeTypeName("ma_uint32")] uint channelsOut, [NativeTypeName("const ma_channel *")] byte* pChannelMapOut, ma_channel_mix_mode mixingMode);
+        public static extern ma_channel_converter_config ma_channel_converter_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channelsIn, [NativeTypeName("const ma_channel *")] byte* pChannelMapIn, [NativeTypeName("ma_uint32")] uint channelsOut, [NativeTypeName("const ma_channel *")] byte* pChannelMapOut, ma_channel_mix_mode mixingMode);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_channel_converter_get_heap_size([NativeTypeName("const ma_channel_converter_config *")] ma_channel_converter_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -804,7 +803,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_data_converter_config ma_data_converter_config_init_default();
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_data_converter_config ma_data_converter_config_init(ma_format formatIn, ma_format formatOut, [NativeTypeName("ma_uint32")] uint channelsIn, [NativeTypeName("ma_uint32")] uint channelsOut, [NativeTypeName("ma_uint32")] uint sampleRateIn, [NativeTypeName("ma_uint32")] uint sampleRateOut);
+        public static extern ma_data_converter_config ma_data_converter_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatIn, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatOut, [NativeTypeName("ma_uint32")] uint channelsIn, [NativeTypeName("ma_uint32")] uint channelsOut, [NativeTypeName("ma_uint32")] uint sampleRateIn, [NativeTypeName("ma_uint32")] uint sampleRateOut);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_data_converter_get_heap_size([NativeTypeName("const ma_data_converter_config *")] ma_data_converter_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -911,16 +910,16 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void ma_pcm_f32_to_s32(void* pOut, [NativeTypeName("const void *")] void* pIn, [NativeTypeName("ma_uint64")] ulong count, ma_dither_mode ditherMode);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_pcm_convert(void* pOut, ma_format formatOut, [NativeTypeName("const void *")] void* pIn, ma_format formatIn, [NativeTypeName("ma_uint64")] ulong sampleCount, ma_dither_mode ditherMode);
+        public static extern void ma_pcm_convert(void* pOut, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatOut, [NativeTypeName("const void *")] void* pIn, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatIn, [NativeTypeName("ma_uint64")] ulong sampleCount, ma_dither_mode ditherMode);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_convert_pcm_frames_format(void* pOut, ma_format formatOut, [NativeTypeName("const void *")] void* pIn, ma_format formatIn, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_uint32")] uint channels, ma_dither_mode ditherMode);
+        public static extern void ma_convert_pcm_frames_format(void* pOut, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatOut, [NativeTypeName("const void *")] void* pIn, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatIn, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_uint32")] uint channels, ma_dither_mode ditherMode);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_deinterleave_pcm_frames(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("const void *")] void* pInterleavedPCMFrames, void** ppDeinterleavedPCMFrames);
+        public static extern void ma_deinterleave_pcm_frames([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("const void *")] void* pInterleavedPCMFrames, void** ppDeinterleavedPCMFrames);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_interleave_pcm_frames(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("const void **")] void** ppDeinterleavedPCMFrames, void* pInterleavedPCMFrames);
+        public static extern void ma_interleave_pcm_frames([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("const void **")] void** ppDeinterleavedPCMFrames, void* pInterleavedPCMFrames);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("ma_channel")]
@@ -968,7 +967,7 @@ namespace Naquadic.Miniaudio.Linux
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("ma_uint64")]
-        public static extern ulong ma_convert_frames(void* pOut, [NativeTypeName("ma_uint64")] ulong frameCountOut, ma_format formatOut, [NativeTypeName("ma_uint32")] uint channelsOut, [NativeTypeName("ma_uint32")] uint sampleRateOut, [NativeTypeName("const void *")] void* pIn, [NativeTypeName("ma_uint64")] ulong frameCountIn, ma_format formatIn, [NativeTypeName("ma_uint32")] uint channelsIn, [NativeTypeName("ma_uint32")] uint sampleRateIn);
+        public static extern ulong ma_convert_frames(void* pOut, [NativeTypeName("ma_uint64")] ulong frameCountOut, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatOut, [NativeTypeName("ma_uint32")] uint channelsOut, [NativeTypeName("ma_uint32")] uint sampleRateOut, [NativeTypeName("const void *")] void* pIn, [NativeTypeName("ma_uint64")] ulong frameCountIn, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format formatIn, [NativeTypeName("ma_uint32")] uint channelsIn, [NativeTypeName("ma_uint32")] uint sampleRateIn);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("ma_uint64")]
@@ -993,7 +992,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_data_source_seek_to_pcm_frame([NativeTypeName("ma_data_source *")] void* pDataSource, [NativeTypeName("ma_uint64")] ulong frameIndex);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_data_source_get_data_format([NativeTypeName("ma_data_source *")] void* pDataSource, ma_format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
+        public static extern ma_result ma_data_source_get_data_format([NativeTypeName("ma_data_source *")] void* pDataSource, [NativeTypeName("ma_format *")] Naquadic.Common.Enums.Format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_data_source_get_cursor_in_pcm_frames([NativeTypeName("ma_data_source *")] void* pDataSource, [NativeTypeName("ma_uint64 *")] ulong* pCursor);
@@ -1048,7 +1047,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern delegate* unmanaged[Cdecl]<void*, void*> ma_data_source_get_next_callback([NativeTypeName("const ma_data_source *")] void* pDataSource);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_audio_buffer_ref_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("const void *")] void* pData, [NativeTypeName("ma_uint64")] ulong sizeInFrames, ma_audio_buffer_ref* pAudioBufferRef);
+        public static extern ma_result ma_audio_buffer_ref_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("const void *")] void* pData, [NativeTypeName("ma_uint64")] ulong sizeInFrames, ma_audio_buffer_ref* pAudioBufferRef);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_audio_buffer_ref_uninit(ma_audio_buffer_ref* pAudioBufferRef);
@@ -1083,7 +1082,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_audio_buffer_ref_get_available_frames([NativeTypeName("const ma_audio_buffer_ref *")] ma_audio_buffer_ref* pAudioBufferRef, [NativeTypeName("ma_uint64 *")] ulong* pAvailableFrames);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_audio_buffer_config ma_audio_buffer_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint64")] ulong sizeInFrames, [NativeTypeName("const void *")] void* pData, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks);
+        public static extern ma_audio_buffer_config ma_audio_buffer_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint64")] ulong sizeInFrames, [NativeTypeName("const void *")] void* pData, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_audio_buffer_init([NativeTypeName("const ma_audio_buffer_config *")] ma_audio_buffer_config* pConfig, ma_audio_buffer* pAudioBuffer);
@@ -1127,7 +1126,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_audio_buffer_get_available_frames([NativeTypeName("const ma_audio_buffer *")] ma_audio_buffer* pAudioBuffer, [NativeTypeName("ma_uint64 *")] ulong* pAvailableFrames);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_paged_audio_buffer_data_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, ma_paged_audio_buffer_data* pData);
+        public static extern ma_result ma_paged_audio_buffer_data_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, ma_paged_audio_buffer_data* pData);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_paged_audio_buffer_data_uninit(ma_paged_audio_buffer_data* pData, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks);
@@ -1232,10 +1231,10 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void* ma_rb_get_subbuffer_ptr(ma_rb* pRB, [NativeTypeName("size_t")] nuint subbufferIndex, void* pBuffer);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_pcm_rb_init_ex(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint subbufferSizeInFrames, [NativeTypeName("ma_uint32")] uint subbufferCount, [NativeTypeName("ma_uint32")] uint subbufferStrideInFrames, void* pOptionalPreallocatedBuffer, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks, ma_pcm_rb* pRB);
+        public static extern ma_result ma_pcm_rb_init_ex([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint subbufferSizeInFrames, [NativeTypeName("ma_uint32")] uint subbufferCount, [NativeTypeName("ma_uint32")] uint subbufferStrideInFrames, void* pOptionalPreallocatedBuffer, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks, ma_pcm_rb* pRB);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_pcm_rb_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint bufferSizeInFrames, void* pOptionalPreallocatedBuffer, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks, ma_pcm_rb* pRB);
+        public static extern ma_result ma_pcm_rb_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint bufferSizeInFrames, void* pOptionalPreallocatedBuffer, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks, ma_pcm_rb* pRB);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_pcm_rb_uninit(ma_pcm_rb* pRB);
@@ -1289,7 +1288,8 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void* ma_pcm_rb_get_subbuffer_ptr(ma_pcm_rb* pRB, [NativeTypeName("ma_uint32")] uint subbufferIndex, void* pBuffer);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_format ma_pcm_rb_get_format([NativeTypeName("const ma_pcm_rb *")] ma_pcm_rb* pRB);
+        [return: NativeTypeName("ma_format")]
+        public static extern Naquadic.Common.Enums.Format ma_pcm_rb_get_format([NativeTypeName("const ma_pcm_rb *")] ma_pcm_rb* pRB);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("ma_uint32")]
@@ -1303,7 +1303,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void ma_pcm_rb_set_sample_rate(ma_pcm_rb* pRB, [NativeTypeName("ma_uint32")] uint sampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_duplex_rb_init(ma_format captureFormat, [NativeTypeName("ma_uint32")] uint captureChannels, [NativeTypeName("ma_uint32")] uint sampleRate, [NativeTypeName("ma_uint32")] uint captureInternalSampleRate, [NativeTypeName("ma_uint32")] uint captureInternalPeriodSizeInFrames, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks, ma_duplex_rb* pRB);
+        public static extern ma_result ma_duplex_rb_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format captureFormat, [NativeTypeName("ma_uint32")] uint captureChannels, [NativeTypeName("ma_uint32")] uint sampleRate, [NativeTypeName("ma_uint32")] uint captureInternalSampleRate, [NativeTypeName("ma_uint32")] uint captureInternalPeriodSizeInFrames, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks, ma_duplex_rb* pRB);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_duplex_rb_uninit(ma_duplex_rb* pRB);
@@ -1332,17 +1332,17 @@ namespace Naquadic.Miniaudio.Linux
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("const char *")]
-        public static extern sbyte* ma_get_format_name(ma_format format);
+        public static extern sbyte* ma_get_format_name([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_blend_f32(float* pOut, float* pInA, float* pInB, float factor, [NativeTypeName("ma_uint32")] uint channels);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("ma_uint32")]
-        public static extern uint ma_get_bytes_per_sample(ma_format format);
+        public static extern uint ma_get_bytes_per_sample([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format);
 
         [return: NativeTypeName("ma_uint32")]
-        public static uint ma_get_bytes_per_frame(ma_format format, [NativeTypeName("ma_uint32")] uint channels)
+        public static uint ma_get_bytes_per_frame([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels)
         {
             return ma_get_bytes_per_sample(format) * channels;
         }
@@ -1385,19 +1385,19 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_event_signal([NativeTypeName("ma_event *")] void** pEvent);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_fence_init(ma_fence* pFence);
+        public static extern ma_result ma_fence_init([NativeTypeName("ma_fence *")] Naquadic.Common.Structs.Fence* pFence);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_fence_uninit(ma_fence* pFence);
+        public static extern void ma_fence_uninit([NativeTypeName("ma_fence *")] Naquadic.Common.Structs.Fence* pFence);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_fence_acquire(ma_fence* pFence);
+        public static extern ma_result ma_fence_acquire([NativeTypeName("ma_fence *")] Naquadic.Common.Structs.Fence* pFence);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_fence_release(ma_fence* pFence);
+        public static extern ma_result ma_fence_release([NativeTypeName("ma_fence *")] Naquadic.Common.Structs.Fence* pFence);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_fence_wait(ma_fence* pFence);
+        public static extern ma_result ma_fence_wait([NativeTypeName("ma_fence *")] Naquadic.Common.Structs.Fence* pFence);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_async_notification_signal([NativeTypeName("ma_async_notification *")] void* pNotification);
@@ -1599,28 +1599,17 @@ namespace Naquadic.Miniaudio.Linux
         public static extern uint ma_calculate_buffer_size_in_frames_from_milliseconds([NativeTypeName("ma_uint32")] uint bufferSizeInMilliseconds, [NativeTypeName("ma_uint32")] uint sampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_copy_pcm_frames(void* dst, [NativeTypeName("const void *")] void* src, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels);
+        public static extern void ma_copy_pcm_frames(void* dst, [NativeTypeName("const void *")] void* src, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_silence_pcm_frames(void* p, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels);
+        public static extern void ma_silence_pcm_frames(void* p, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void* ma_offset_pcm_frames_ptr(void* p, [NativeTypeName("ma_uint64")] ulong offsetInFrames, ma_format format, [NativeTypeName("ma_uint32")] uint channels);
+        public static extern void* ma_offset_pcm_frames_ptr(void* p, [NativeTypeName("ma_uint64")] ulong offsetInFrames, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("const void *")]
-        public static extern void* ma_offset_pcm_frames_const_ptr([NativeTypeName("const void *")] void* p, [NativeTypeName("ma_uint64")] ulong offsetInFrames, ma_format format, [NativeTypeName("ma_uint32")] uint channels);
-
-        public static float* ma_offset_pcm_frames_ptr_f32(float* p, [NativeTypeName("ma_uint64")] ulong offsetInFrames, [NativeTypeName("ma_uint32")] uint channels)
-        {
-            return (float*)(ma_offset_pcm_frames_ptr((void*)(p), offsetInFrames, ma_format_f32, channels));
-        }
-
-        [return: NativeTypeName("const float *")]
-        public static float* ma_offset_pcm_frames_const_ptr_f32([NativeTypeName("const float *")] float* p, [NativeTypeName("ma_uint64")] ulong offsetInFrames, [NativeTypeName("ma_uint32")] uint channels)
-        {
-            return (float*)(ma_offset_pcm_frames_const_ptr((void*)(p), offsetInFrames, ma_format_f32, channels));
-        }
+        public static extern void* ma_offset_pcm_frames_const_ptr([NativeTypeName("const void *")] void* p, [NativeTypeName("ma_uint64")] ulong offsetInFrames, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_clip_samples_u8([NativeTypeName("ma_uint8 *")] byte* pDst, [NativeTypeName("const ma_int16 *")] short* pSrc, [NativeTypeName("ma_uint64")] ulong count);
@@ -1638,7 +1627,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void ma_clip_samples_f32(float* pDst, [NativeTypeName("const float *")] float* pSrc, [NativeTypeName("ma_uint64")] ulong count);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_clip_pcm_frames(void* pDst, [NativeTypeName("const void *")] void* pSrc, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels);
+        public static extern void ma_clip_pcm_frames(void* pDst, [NativeTypeName("const void *")] void* pSrc, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_copy_and_apply_volume_factor_u8([NativeTypeName("ma_uint8 *")] byte* pSamplesOut, [NativeTypeName("const ma_uint8 *")] byte* pSamplesIn, [NativeTypeName("ma_uint64")] ulong sampleCount, float factor);
@@ -1686,7 +1675,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void ma_copy_and_apply_volume_factor_pcm_frames_f32(float* pFramesOut, [NativeTypeName("const float *")] float* pFramesIn, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_uint32")] uint channels, float factor);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_copy_and_apply_volume_factor_pcm_frames(void* pFramesOut, [NativeTypeName("const void *")] void* pFramesIn, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels, float factor);
+        public static extern void ma_copy_and_apply_volume_factor_pcm_frames(void* pFramesOut, [NativeTypeName("const void *")] void* pFramesIn, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, float factor);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_apply_volume_factor_pcm_frames_u8([NativeTypeName("ma_uint8 *")] byte* pFrames, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_uint32")] uint channels, float factor);
@@ -1704,7 +1693,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void ma_apply_volume_factor_pcm_frames_f32(float* pFrames, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_uint32")] uint channels, float factor);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_apply_volume_factor_pcm_frames(void* pFrames, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels, float factor);
+        public static extern void ma_apply_volume_factor_pcm_frames(void* pFrames, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, float factor);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void ma_copy_and_apply_volume_factor_per_channel_f32(float* pFramesOut, [NativeTypeName("const float *")] float* pFramesIn, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_uint32")] uint channels, float* pChannelGains);
@@ -1725,7 +1714,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern void ma_copy_and_apply_volume_and_clip_samples_f32(float* pDst, [NativeTypeName("const float *")] float* pSrc, [NativeTypeName("ma_uint64")] ulong count, float volume);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void ma_copy_and_apply_volume_and_clip_pcm_frames(void* pDst, [NativeTypeName("const void *")] void* pSrc, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels, float volume);
+        public static extern void ma_copy_and_apply_volume_and_clip_pcm_frames(void* pDst, [NativeTypeName("const void *")] void* pSrc, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, float volume);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern float ma_volume_linear_to_db(float factor);
@@ -1767,10 +1756,10 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_default_vfs_init(ma_default_vfs* pVFS, [NativeTypeName("const ma_allocation_callbacks *")] ma_allocation_callbacks* pAllocationCallbacks);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_decoding_backend_config ma_decoding_backend_config_init(ma_format preferredFormat, [NativeTypeName("ma_uint32")] uint seekPointCount);
+        public static extern ma_decoding_backend_config ma_decoding_backend_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format preferredFormat, [NativeTypeName("ma_uint32")] uint seekPointCount);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_decoder_config ma_decoder_config_init(ma_format outputFormat, [NativeTypeName("ma_uint32")] uint outputChannels, [NativeTypeName("ma_uint32")] uint outputSampleRate);
+        public static extern ma_decoder_config ma_decoder_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format outputFormat, [NativeTypeName("ma_uint32")] uint outputChannels, [NativeTypeName("ma_uint32")] uint outputSampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_decoder_config ma_decoder_config_init_default();
@@ -1803,7 +1792,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_decoder_seek_to_pcm_frame(ma_decoder* pDecoder, [NativeTypeName("ma_uint64")] ulong frameIndex);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_decoder_get_data_format(ma_decoder* pDecoder, ma_format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
+        public static extern ma_result ma_decoder_get_data_format(ma_decoder* pDecoder, [NativeTypeName("ma_format *")] Naquadic.Common.Enums.Format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_decoder_get_cursor_in_pcm_frames(ma_decoder* pDecoder, [NativeTypeName("ma_uint64 *")] ulong* pCursor);
@@ -1824,7 +1813,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_decode_memory([NativeTypeName("const void *")] void* pData, [NativeTypeName("size_t")] nuint dataSize, ma_decoder_config* pConfig, [NativeTypeName("ma_uint64 *")] ulong* pFrameCountOut, void** ppPCMFramesOut);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_encoder_config ma_encoder_config_init(ma_encoding_format encodingFormat, ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
+        public static extern ma_encoder_config ma_encoder_config_init(ma_encoding_format encodingFormat, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_encoder_init([NativeTypeName("ma_encoder_write_proc")] delegate* unmanaged[Cdecl]<ma_encoder*, void*, nuint, nuint*, ma_result> onWrite, [NativeTypeName("ma_encoder_seek_proc")] delegate* unmanaged[Cdecl]<ma_encoder*, long, ma_seek_origin, ma_result> onSeek, void* pUserData, [NativeTypeName("const ma_encoder_config *")] ma_encoder_config* pConfig, ma_encoder* pEncoder);
@@ -1848,7 +1837,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_encoder_write_pcm_frames(ma_encoder* pEncoder, [NativeTypeName("const void *")] void* pFramesIn, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_uint64 *")] ulong* pFramesWritten);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_waveform_config ma_waveform_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, ma_waveform_type type, double amplitude, double frequency);
+        public static extern ma_waveform_config ma_waveform_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, ma_waveform_type type, double amplitude, double frequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_waveform_init([NativeTypeName("const ma_waveform_config *")] ma_waveform_config* pConfig, ma_waveform* pWaveform);
@@ -1875,7 +1864,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_waveform_set_sample_rate(ma_waveform* pWaveform, [NativeTypeName("ma_uint32")] uint sampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_pulsewave_config ma_pulsewave_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double dutyCycle, double amplitude, double frequency);
+        public static extern ma_pulsewave_config ma_pulsewave_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate, double dutyCycle, double amplitude, double frequency);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_pulsewave_init([NativeTypeName("const ma_pulsewave_config *")] ma_pulsewave_config* pConfig, ma_pulsewave* pWaveform);
@@ -1902,7 +1891,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_pulsewave_set_duty_cycle(ma_pulsewave* pWaveform, double dutyCycle);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_noise_config ma_noise_config_init(ma_format format, [NativeTypeName("ma_uint32")] uint channels, ma_noise_type type, [NativeTypeName("ma_int32")] int seed, double amplitude);
+        public static extern ma_noise_config ma_noise_config_init([NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, ma_noise_type type, [NativeTypeName("ma_int32")] int seed, double amplitude);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_noise_get_heap_size([NativeTypeName("const ma_noise_config *")] ma_noise_config* pConfig, [NativeTypeName("size_t *")] nuint* pHeapSizeInBytes);
@@ -1953,10 +1942,10 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_resource_manager_register_file_w(ma_resource_manager* pResourceManager, [NativeTypeName("const wchar_t *")] uint* pFilePath, [NativeTypeName("ma_uint32")] uint flags);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_resource_manager_register_decoded_data(ma_resource_manager* pResourceManager, [NativeTypeName("const char *")] sbyte* pName, [NativeTypeName("const void *")] void* pData, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
+        public static extern ma_result ma_resource_manager_register_decoded_data(ma_resource_manager* pResourceManager, [NativeTypeName("const char *")] sbyte* pName, [NativeTypeName("const void *")] void* pData, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_resource_manager_register_decoded_data_w(ma_resource_manager* pResourceManager, [NativeTypeName("const wchar_t *")] uint* pName, [NativeTypeName("const void *")] void* pData, [NativeTypeName("ma_uint64")] ulong frameCount, ma_format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
+        public static extern ma_result ma_resource_manager_register_decoded_data_w(ma_resource_manager* pResourceManager, [NativeTypeName("const wchar_t *")] uint* pName, [NativeTypeName("const void *")] void* pData, [NativeTypeName("ma_uint64")] ulong frameCount, [NativeTypeName("ma_format")] Naquadic.Common.Enums.Format format, [NativeTypeName("ma_uint32")] uint channels, [NativeTypeName("ma_uint32")] uint sampleRate);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_resource_manager_register_encoded_data(ma_resource_manager* pResourceManager, [NativeTypeName("const char *")] sbyte* pName, [NativeTypeName("const void *")] void* pData, [NativeTypeName("size_t")] nuint sizeInBytes);
@@ -1998,7 +1987,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_resource_manager_data_buffer_seek_to_pcm_frame(ma_resource_manager_data_buffer* pDataBuffer, [NativeTypeName("ma_uint64")] ulong frameIndex);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_resource_manager_data_buffer_get_data_format(ma_resource_manager_data_buffer* pDataBuffer, ma_format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
+        public static extern ma_result ma_resource_manager_data_buffer_get_data_format(ma_resource_manager_data_buffer* pDataBuffer, [NativeTypeName("ma_format *")] Naquadic.Common.Enums.Format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_resource_manager_data_buffer_get_cursor_in_pcm_frames(ma_resource_manager_data_buffer* pDataBuffer, [NativeTypeName("ma_uint64 *")] ulong* pCursor);
@@ -2038,7 +2027,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_resource_manager_data_stream_seek_to_pcm_frame(ma_resource_manager_data_stream* pDataStream, [NativeTypeName("ma_uint64")] ulong frameIndex);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_resource_manager_data_stream_get_data_format(ma_resource_manager_data_stream* pDataStream, ma_format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
+        public static extern ma_result ma_resource_manager_data_stream_get_data_format(ma_resource_manager_data_stream* pDataStream, [NativeTypeName("ma_format *")] Naquadic.Common.Enums.Format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_resource_manager_data_stream_get_cursor_in_pcm_frames(ma_resource_manager_data_stream* pDataStream, [NativeTypeName("ma_uint64 *")] ulong* pCursor);
@@ -2081,7 +2070,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_resource_manager_data_source_seek_to_pcm_frame(ma_resource_manager_data_source* pDataSource, [NativeTypeName("ma_uint64")] ulong frameIndex);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_resource_manager_data_source_get_data_format(ma_resource_manager_data_source* pDataSource, ma_format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
+        public static extern ma_result ma_resource_manager_data_source_get_data_format(ma_resource_manager_data_source* pDataSource, [NativeTypeName("ma_format *")] Naquadic.Common.Enums.Format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_resource_manager_data_source_get_cursor_in_pcm_frames(ma_resource_manager_data_source* pDataSource, [NativeTypeName("ma_uint64 *")] ulong* pCursor);
@@ -2527,10 +2516,10 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_engine_play_sound(ma_engine* pEngine, [NativeTypeName("const char *")] sbyte* pFilePath, [NativeTypeName("ma_sound_group *")] ma_sound* pGroup);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_sound_init_from_file(ma_engine* pEngine, [NativeTypeName("const char *")] sbyte* pFilePath, [NativeTypeName("ma_uint32")] uint flags, [NativeTypeName("ma_sound_group *")] ma_sound* pGroup, ma_fence* pDoneFence, ma_sound* pSound);
+        public static extern ma_result ma_sound_init_from_file(ma_engine* pEngine, [NativeTypeName("const char *")] sbyte* pFilePath, [NativeTypeName("ma_uint32")] uint flags, [NativeTypeName("ma_sound_group *")] ma_sound* pGroup, [NativeTypeName("ma_fence *")] Naquadic.Common.Structs.Fence* pDoneFence, ma_sound* pSound);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_sound_init_from_file_w(ma_engine* pEngine, [NativeTypeName("const wchar_t *")] uint* pFilePath, [NativeTypeName("ma_uint32")] uint flags, [NativeTypeName("ma_sound_group *")] ma_sound* pGroup, ma_fence* pDoneFence, ma_sound* pSound);
+        public static extern ma_result ma_sound_init_from_file_w(ma_engine* pEngine, [NativeTypeName("const wchar_t *")] uint* pFilePath, [NativeTypeName("ma_uint32")] uint flags, [NativeTypeName("ma_sound_group *")] ma_sound* pGroup, [NativeTypeName("ma_fence *")] Naquadic.Common.Structs.Fence* pDoneFence, ma_sound* pSound);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_sound_init_copy(ma_engine* pEngine, [NativeTypeName("const ma_sound *")] ma_sound* pExistingSound, [NativeTypeName("ma_uint32")] uint flags, [NativeTypeName("ma_sound_group *")] ma_sound* pGroup, ma_sound* pSound);
@@ -2753,7 +2742,7 @@ namespace Naquadic.Miniaudio.Linux
         public static extern ma_result ma_sound_seek_to_pcm_frame(ma_sound* pSound, [NativeTypeName("ma_uint64")] ulong frameIndex);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern ma_result ma_sound_get_data_format(ma_sound* pSound, ma_format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
+        public static extern ma_result ma_sound_get_data_format(ma_sound* pSound, [NativeTypeName("ma_format *")] Naquadic.Common.Enums.Format* pFormat, [NativeTypeName("ma_uint32 *")] uint* pChannels, [NativeTypeName("ma_uint32 *")] uint* pSampleRate, [NativeTypeName("ma_channel *")] byte* pChannelMap, [NativeTypeName("size_t")] nuint channelMapCap);
 
         [DllImport("miniaudio.so", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern ma_result ma_sound_get_cursor_in_pcm_frames(ma_sound* pSound, [NativeTypeName("ma_uint64 *")] ulong* pCursor);
